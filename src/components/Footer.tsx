@@ -1,0 +1,121 @@
+"use client";
+
+import Image from "next/image";
+
+const Footer = () => {
+  return (
+    <footer className="footer-section">
+      <div className="container-fluid px-4 relative">
+
+        {/* <div className="sofa-img">
+          <img src="/images/50-years-gold-round.png" alt="50 Years of Excellence" className="img-fluid" />
+        </div> */}
+
+        <div className="row justify-content-center">
+          <div className="col-lg-8">
+            <div className="subscription-form">
+              <h3 className="d-flex align-items-center justify-content-center">
+                <span className="icon"><span className="fa fa-paper-plane"></span></span>
+                <span>Subscribe to Newsletter</span>
+              </h3>
+
+              <form action="#" className="row g-3 justify-content-center">
+                <div className="col-6 col-md-auto">
+                  <input type="text" className="form-control" placeholder="Enter your name" />
+                </div>
+                <div className="col-6 col-md-auto">
+                  <input type="email" className="form-control" placeholder="Enter your email" />
+                </div>
+                <div className="col-12 col-md-auto">
+                  <button className="btn btn-secondary w-100">
+                    <span className="fa fa-paper-plane"></span>
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-dark-bg">
+        <div className="container-fluid px-5">
+          <div className="row g-5 mb-5">
+            <div className="col-lg-4">
+              <div className="mb-4 footer-logo-wrap">
+                <a href="#" className="footer-logo footer-logo-link">
+                  <img src="/images/logo-white.png" alt="Logo" width={200} height={60} />
+                </a>
+              </div>
+              <p className="mb-4">Agromech Hospitality Solutions provides premium interior and kitchen equipment for the hospitality industry. We help you create modern, efficient, and beautiful spaces.</p>
+
+              <ul className="list-unstyled custom-social">
+                <li><a href="#"><span className="fa fa-brands fa-facebook-f"></span></a></li>
+                <li><a href="#"><span className="fa fa-brands fa-twitter"></span></a></li>
+                <li><a href="#"><span className="fa fa-brands fa-instagram"></span></a></li>
+                <li><a href="#"><span className="fa fa-brands fa-linkedin"></span></a></li>
+              </ul>
+            </div>
+
+            <div className="col-lg-8">
+              <div className="row links-wrap">
+                <div className="col-6 col-sm-6 col-md-3">
+                  <ul className="list-unstyled">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Catalogues</a></li>
+                  </ul>
+                </div>
+
+                <div className="col-6 col-sm-6 col-md-3">
+                  <ul className="list-unstyled">
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event("open-enquiry-drawer")); }}>Enquire Now</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+
+                <div className="col-6 col-sm-6 col-md-3">
+                  <ul className="list-unstyled">
+                    <li><a href="#">Useful Links</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Solutions</a></li>
+                  </ul>
+                </div>
+
+                <div className="col-6 col-sm-6 col-md-3 d-block d-md-none">
+                  <ul className="list-unstyled">
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="border-top copyright">
+            <div className="row pt-4">
+              <div className="col-lg-6">
+                <p className="mb-2 text-center text-lg-start">Copyright &copy;{new Date().getFullYear()}. All Rights Reserved. &mdash; Agromech Hospitality Solutions
+                </p>
+              </div>
+
+              <div className="col-lg-6 text-center text-lg-end d-none d-md-block">
+                <ul className="list-unstyled d-inline-flex ms-auto">
+                  {/* <li className="me-4"><a href="#">Terms &amp; Conditions</a></li> */}
+                  <li><a href="/privacy">Privacy Policy</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
