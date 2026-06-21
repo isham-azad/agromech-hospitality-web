@@ -42,7 +42,7 @@ const PopularProduct = () => {
   const [selectedService, setSelectedService] = useState<any>(null);
 
   return (
-    <section className="popular-product pt-24 pb-12 bg-zinc-50 font-inter relative overflow-hidden">
+    <section className="popular-product pt-24 !pb-6 bg-zinc-50 font-inter relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="flex justify-between items-center mb-12 mt-5">
           <div className="space-y-2">

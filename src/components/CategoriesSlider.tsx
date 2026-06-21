@@ -25,9 +25,14 @@ const CategoriesSlider = () => {
     <section id="categories-section" className="categories-section">
       <style jsx>{`
         .categories-section {
-          padding: 4rem 0;
+          padding: 2.5rem 0 0.5rem 0;
           position: relative;
           scroll-margin-top: 100px;
+        }
+        @media (min-width: 768px) {
+          .categories-section {
+            padding: 4rem 0;
+          }
         }
         .categories-header {
           display: flex;
@@ -125,7 +130,7 @@ const CategoriesSlider = () => {
             1024: { slidesPerView: 4, spaceBetween: 40 },
             1200: { slidesPerView: 6, spaceBetween: 40 },
           }}
-          className="pb-10"
+          className="pb-2 md:pb-10"
         >
           {categories.map((cat, i) => (
             <SwiperSlide key={i}>

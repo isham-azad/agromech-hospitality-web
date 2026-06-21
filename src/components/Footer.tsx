@@ -86,7 +86,7 @@ const Footer = () => {
                 <div className="col-6 col-sm-6 col-md-3 d-block d-md-none">
                   <ul className="list-unstyled">
                     <li><a href="#">Legal</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    {/* <li><a href="#">Terms &amp; Conditions</a></li> */}
                     <li><a href="/privacy">Privacy Policy</a></li>
                   </ul>
                 </div>
