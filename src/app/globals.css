@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@media (max-width: 767px) {
+  .mobile-line-adjust {
+    left: 48px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .mobile-dot-adjust {
+    left: 57px !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .mobile-card-adjust {
+    margin-left: 80px !important;
+    margin-right: 16px !important;
+  }
+
+  /* Force beautiful dark-theme project grid cards on mobile */
+  .group img {
+    opacity: 0.95 !important;
+    filter: grayscale(0) !important;
+    transform: scale(1) !important;
+  }
+
+  .group .bg-gradient-to-t {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%) !important;
+  }
+
+  .group h3 {
+    color: #ffffff !important;
+  }
+
+  .group h3 span {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  /* Force super-sleek mobile Enquiry button size */
+  .mobile-enquire-btn {
+    font-size: 10px !important;
+    letter-spacing: 0.05em !important;
+    padding: 1px 6px !important;
+  }
+
+  .mobile-enquire-btn span {
+    font-size: 12px !important;
+  }
+
+  .mobile-enquire-btn i {
+    font-size: 12px !important;
+  }
+}
