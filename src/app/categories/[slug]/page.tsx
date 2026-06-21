@@ -434,28 +434,26 @@ export default function CategoryPage() {
       {/* Brands Section */}
       {data.brands && data.brands.length > 0 && (
         <section className="py-24 bg-white border-t border-zinc-100 overflow-hidden">
-          {data.brands.length > 8 && (
-            <style jsx>{`
-              @keyframes marquee-brands {
-                0% {
-                  transform: translateX(0);
-                }
-                100% {
-                  transform: translateX(-50%);
-                }
+          <style jsx>{`
+            @keyframes marquee-brands {
+              0% {
+                transform: translateX(0);
               }
-              .marquee-track-brands {
-                display: flex;
-                gap: 2rem;
-                white-space: nowrap;
-                animation: marquee-brands 220s linear infinite;
+              100% {
+                transform: translateX(-50%);
               }
-              .marquee-track-brands:hover {
-                animation-play-state: paused;
-              }
-            `}</style>
-          )}
-          <div className={`${data.brands.length > 8 ? "container-fluid px-5" : "container mx-auto px-6 max-w-6xl"}`}>
+            }
+            .marquee-track-brands {
+              display: flex;
+              gap: 2rem;
+              white-space: nowrap;
+              animation: marquee-brands 220s linear infinite;
+            }
+            .marquee-track-brands:hover {
+              animation-play-state: paused;
+            }
+          `}</style>
+          <div className={`${data.brands.length > 6 ? "container-fluid px-5" : "container mx-auto px-6 max-w-6xl"}`}>
             <div className="text-center mb-16">
               <span className="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.5em] block mb-3">Our Partners</span>
               <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight mb-4">
@@ -464,7 +462,7 @@ export default function CategoryPage() {
               <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
             </div>
 
-            {data.brands.length > 8 ? (
+            {data.brands.length > 6 ? (
               /* Infinite Slider Wrapper */
               <div className="relative w-full flex overflow-x-hidden py-2">
                 {/* Gradient Overlays for smooth fading effect */}
