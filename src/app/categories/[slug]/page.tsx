@@ -300,6 +300,12 @@ export default function CategoryPage() {
   const slug = params.slug as string;
   const data = categoryData[slug];
 
+  // Helper variables for Brands Marquee
+  const brands = data?.brands || [];
+  const halfBrands = Math.ceil(brands.length / 2);
+  const brandRow1 = brands.slice(0, halfBrands);
+  const brandRow2 = brands.slice(halfBrands);
+
   if (!data) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-zinc-50">
@@ -435,6 +441,7 @@ export default function CategoryPage() {
       {data.brands && data.brands.length > 0 && (
         <section className="py-24 bg-white border-t border-zinc-100 overflow-hidden">
           <style jsx>{`
+            /* Desktop Marquee Animation */
             @keyframes marquee-brands {
               0% {
                 transform: translateX(0);
@@ -452,6 +459,44 @@ export default function CategoryPage() {
             .marquee-track-brands:hover {
               animation-play-state: paused;
             }
+
+            /* Mobile Marquee Animations (Speed set to 10s as requested) */
+            @keyframes marquee-brands-mobile-left {
+              0% {
+                transform: translate3d(0, 0, 0);
+              }
+              100% {
+                transform: translate3d(-50%, 0, 0);
+              }
+            }
+            @keyframes marquee-brands-mobile-right {
+              0% {
+                transform: translate3d(-50%, 0, 0);
+              }
+              100% {
+                transform: translate3d(0, 0, 0);
+              }
+            }
+            .marquee-track-brands-mobile-left {
+              display: flex;
+              gap: 2rem;
+              white-space: nowrap;
+              animation: marquee-brands-mobile-left 10s linear infinite;
+              will-change: transform;
+              backface-visibility: hidden;
+            }
+            .marquee-track-brands-mobile-right {
+              display: flex;
+              gap: 2rem;
+              white-space: nowrap;
+              animation: marquee-brands-mobile-right 10s linear infinite;
+              will-change: transform;
+              backface-visibility: hidden;
+            }
+            .marquee-track-brands-mobile-left:hover,
+            .marquee-track-brands-mobile-right:hover {
+              animation-play-state: paused;
+            }
           `}</style>
           <div className={`${data.brands.length > 6 ? "container-fluid px-5" : "container mx-auto px-6 max-w-6xl"}`}>
             <div className="text-center mb-16">
@@ -463,29 +508,72 @@ export default function CategoryPage() {
             </div>
 
             {data.brands.length > 6 ? (
-              /* Infinite Slider Wrapper */
-              <div className="relative w-full flex overflow-x-hidden py-2">
-                {/* Gradient Overlays for smooth fading effect */}
-                <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+              <>
+                {/* Desktop View (1 row, right to left) */}
+                <div className="hidden md:flex relative w-full overflow-x-hidden py-2">
+                  {/* Gradient Overlays for smooth fading effect */}
+                  <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+                  <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
 
-                <div className="marquee-track-brands shrink-0">
-                  {/* Quadruple the list to ensure it covers viewport width and loops perfectly */}
-                  {[...data.brands, ...data.brands, ...data.brands, ...data.brands].map((brand: any, index: number) => (
-                    <div
-                      key={index}
-                      className="bg-white border border-zinc-100 rounded-2xl p-4 h-24 w-36 sm:w-44 flex items-center justify-center shadow-xs shrink-0"
-                      title={brand.name}
-                    >
-                      <img
-                        src={brand.logo}
-                        alt={`${brand.name} Logo`}
-                        className="max-h-12 max-w-full object-contain"
-                      />
-                    </div>
-                  ))}
+                  <div className="marquee-track-brands shrink-0">
+                    {/* Quadruple the list to ensure it covers viewport width and loops perfectly */}
+                    {[...data.brands, ...data.brands, ...data.brands, ...data.brands].map((brand: any, index: number) => (
+                      <div
+                        key={index}
+                        className="bg-white border border-zinc-100 rounded-2xl p-4 h-24 w-36 sm:w-44 flex items-center justify-center shadow-xs shrink-0"
+                        title={brand.name}
+                      >
+                        <img
+                          src={brand.logo}
+                          alt={`${brand.name} Logo`}
+                          className="max-h-12 max-w-full object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+
+                {/* Mobile View (2 rows, row 1 right-to-left, row 2 left-to-right) */}
+                <div className="flex md:hidden relative w-full flex-col gap-4 overflow-x-hidden py-2">
+                  {/* Gradient Overlays for smooth fading effect (narrower on mobile) */}
+                  <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+                  <div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+
+                  {/* Row 1 - Right to Left */}
+                  <div className="marquee-track-brands-mobile-left shrink-0">
+                    {[...brandRow1, ...brandRow1, ...brandRow1, ...brandRow1].map((brand: any, index: number) => (
+                      <div
+                        key={`mobile-brand-row1-${index}`}
+                        className="bg-white border border-zinc-100 rounded-2xl p-4 h-24 w-36 sm:w-44 flex items-center justify-center shadow-xs shrink-0 transform-gpu"
+                        title={brand.name}
+                      >
+                        <img
+                          src={brand.logo}
+                          alt={`${brand.name} Logo`}
+                          className="max-h-12 max-w-full object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Row 2 - Left to Right */}
+                  <div className="marquee-track-brands-mobile-right shrink-0">
+                    {[...brandRow2, ...brandRow2, ...brandRow2, ...brandRow2].map((brand: any, index: number) => (
+                      <div
+                        key={`mobile-brand-row2-${index}`}
+                        className="bg-white border border-zinc-100 rounded-2xl p-4 h-24 w-36 sm:w-44 flex items-center justify-center shadow-xs shrink-0 transform-gpu"
+                        title={brand.name}
+                      >
+                        <img
+                          src={brand.logo}
+                          alt={`${brand.name} Logo`}
+                          className="max-h-12 max-w-full object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
             ) : (
               /* Static Flex Layout */
               <div className="flex flex-wrap gap-6 md:gap-8 items-center justify-center">

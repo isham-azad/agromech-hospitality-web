@@ -152,7 +152,7 @@ const ProjectsPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="group space-y-4 sm:space-y-6"
+                    className="group project-card space-y-4 sm:space-y-6"
                   >
                     <div className="relative aspect-[4/5] bg-zinc-950 sm:bg-zinc-50 rounded-2xl sm:rounded-[2.5rem] overflow-hidden transition-all duration-700 group-hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)]">
                       {project.image && (

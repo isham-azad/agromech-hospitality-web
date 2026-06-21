@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <section id="about-section" style={{ scrollMarginTop: "100px" }} className="bg-[#221F51] py-20 md:py-32 overflow-hidden">
+    <section id="about-section" style={{ scrollMarginTop: "100px" }} className="bg-[#221F51] py-12 md:py-32 overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-24">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-24">
 
           {/* Left Side: Brand Logo */}
           <motion.div
@@ -18,7 +18,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="w-full md:w-[30%] flex justify-center md:justify-start"
           >
-            <div className="relative w-48 h-24 md:w-72 md:h-40">
+            <div className="relative w-40 h-20 md:w-72 md:h-40">
               <Image
                 src="/images/logo-white.png"
                 alt="Agromech Logo"
@@ -38,12 +38,12 @@ const AboutSection = () => {
             className="w-full md:w-[65%] flex flex-col justify-center text-left"
           >
             {/* About Heading */}
-            <h2 className="text-3xl md:text-5xl font-medium uppercase tracking-[0.4em] mb-4 text-white">
-              ABOUT <span className="font-black text-white ml-2 md:ml-4">AGROMECH</span>
+            <h2 className="text-3xl md:text-5xl font-medium uppercase tracking-[0.2em] md:tracking-[0.4em] mb-4 text-white">
+              ABOUT <span className="font-black text-white ml-0 md:ml-4">AGROMECH</span>
             </h2>
 
             {/* Sub-Headline */}
-            <h3 className="text-base md:text-xl font-bold uppercase tracking-[0.05em] text-white/95 mb-8 leading-tight">
+            <h3 className="text-base md:text-xl font-bold uppercase tracking-[0.05em] text-white/95 mb-5 md:mb-8 leading-tight">
               YOUR ONE-STOP SOLUTION FOR HOSPITALITY OS&E, COMMERCIAL KITCHEN & LAUNDRY EQUIPMENT
             </h3>
 

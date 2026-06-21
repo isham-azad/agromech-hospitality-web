@@ -118,7 +118,7 @@ export default function SolutionsPage() {
       <section className="py-20 md:py-28 px-6 bg-white relative overflow-hidden">
         {/* Decorative Grid Line Graphics */}
         <div className="absolute right-0 top-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
-        
+
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start mb-16">
             <motion.div
@@ -129,7 +129,7 @@ export default function SolutionsPage() {
             >
               <span className="text-[#D4AF37] font-bold text-xs tracking-[0.3em] uppercase block">Section 01 / OS&E</span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-zinc-900 leading-none uppercase">
-                Bespoke OS&E <br/>
+                Bespoke OS&E <br />
                 <span className="text-[#D4AF37]">Solutions</span>
               </h2>
               <h3 className="text-xl md:text-2xl font-bold text-zinc-800 leading-tight pt-2">
@@ -149,7 +149,7 @@ export default function SolutionsPage() {
             >
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-zinc-100 aspect-[4/3]">
                 <Image
-                  src="/images/categories/buffetware-hero.jpg"
+                  src="/images/categories/buffetware.jpg"
                   alt="Premium Tabletop Styling"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-700"
@@ -199,7 +199,7 @@ export default function SolutionsPage() {
             >
               <span className="text-[#D4AF37] font-bold text-xs tracking-[0.3em] uppercase block">Section 02 / Engineering</span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-none uppercase">
-                Commercial Kitchen & <br/>
+                Commercial Kitchen & <br />
                 <span className="text-[#D4AF37]">Laundry Solutions</span>
               </h2>
               <h3 className="text-xl md:text-2xl font-bold text-white/90 leading-tight pt-2">
