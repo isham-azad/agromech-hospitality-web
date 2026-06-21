@@ -36,21 +36,21 @@ body {
   }
 
   /* Force beautiful dark-theme project grid cards on mobile */
-  .group img {
+  .project-card img {
     opacity: 0.95 !important;
     filter: grayscale(0) !important;
     transform: scale(1) !important;
   }
 
-  .group .bg-gradient-to-t {
+  .project-card .bg-gradient-to-t {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%) !important;
   }
 
-  .group h3 {
+  .project-card h3 {
     color: #ffffff !important;
   }
 
-  .group h3 span {
+  .project-card h3 span {
     color: rgba(255, 255, 255, 0.6) !important;
   }
 

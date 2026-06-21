@@ -53,11 +53,11 @@ const AboutPage = () => {
             transition={{ duration: 0.8 }}
             className=" p-10 md:p-16 rounded-[3rem] text-center max-w-4xl"
           >
-            <span className="text-[#D4AF37] font-bold text-xs tracking-[0.4em] uppercase block mb-4">Who We Are</span>
+            <span className="text-[#FD8E0E] font-bold text-xs tracking-[0.4em] uppercase block mb-4">Who We Are</span>
             <h1 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tight mb-6 leading-none">
-              Redefining <br /><span className="text-[#D4AF37]">Hospitality</span>
+              Redefining <br /><span className="text-[#FD8E0E]">Hospitality</span>
             </h1>
-            <div className="w-20 h-1 bg-[#D4AF37] mx-auto"></div>
+            <div className="w-20 h-1 bg-[#FD8E0E] mx-auto"></div>
           </motion.div>
         </div>
       </section>
@@ -73,7 +73,7 @@ const AboutPage = () => {
               className="space-y-12"
             >
               <div className="space-y-4">
-                <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">Our <span className="text-[#D4AF37]">Vision</span></h2>
+                <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">Our <span className="text-[#FD8E0E]">Vision</span></h2>
                 <p className="text-zinc-600 text-lg leading-relaxed font-light">
                   The Agromech Group’s entry into the hospitality sector was driven by a clear vision — to meet the industry’s growing demand for a comprehensive, high-quality, and reliable product range from a single trusted source.
                 </p>
@@ -82,7 +82,7 @@ const AboutPage = () => {
                 </p>
               </div>
               <div className="space-y-4">
-                <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">Our <span className="text-[#D4AF37]">Leadership</span></h2>
+                <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">Our <span className="text-[#FD8E0E]">Leadership</span></h2>
                 <p className="text-zinc-600 text-lg leading-relaxed font-light">
                   Agromech Hospitality Dubai, led by industry veterans Mr. Sanjay Jain and Mr. Joe Thomas, is built on decades of experience and a reputation for integrity and trust.
                 </p>
@@ -124,7 +124,7 @@ const AboutPage = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-zinc-900">Direct Engagement, <span className="text-[#D4AF37]">Stronger Partnerships</span></h2>
+            <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-zinc-900">Direct Engagement, <span className="text-[#FD8E0E]">Stronger Partnerships</span></h2>
             <p className="text-zinc-600 text-lg leading-relaxed font-light">
               By eliminating intermediaries, we ensure direct engagement and stronger partnerships with our valued customers. We are dedicated to supporting your success with consistent quality, transparent processes, and unwavering responsibility.
             </p>
@@ -161,9 +161,9 @@ const AboutPage = () => {
               className="w-full lg:w-1/2 space-y-8"
             >
               <div className="space-y-2">
-                <span className="text-[#D4AF37] font-bold text-xs tracking-[0.4em] uppercase">What We Do</span>
-                <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">Expert <span className="text-[#D4AF37]">Design</span></h2>
-                <div className="w-20 h-1 bg-[#D4AF37]"></div>
+                <span className="text-[#FD8E0E] font-bold text-xs tracking-[0.4em] uppercase">What We Do</span>
+                <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">Expert <span className="text-[#FD8E0E]">Design</span></h2>
+                <div className="w-20 h-1 bg-[#FD8E0E]"></div>
               </div>
 
               <div className="space-y-6">
@@ -184,7 +184,7 @@ const AboutPage = () => {
 
       {/* Company Overview Section (The "Why") */}
       <section className="py-24 bg-[#221F51] text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#D4AF37]/5 -skew-x-12 transform translate-x-20"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#FD8E0E]/5 -skew-x-12 transform translate-x-20"></div>
         <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -192,26 +192,26 @@ const AboutPage = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tight leading-none">A Legacy of <span className="text-[#D4AF37]">50 Years</span></h2>
-            <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
+            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tight leading-none">A Legacy of <span className="text-[#FD8E0E]">50 Years</span></h2>
+            <div className="w-24 h-1 bg-[#FD8E0E] mx-auto"></div>
             <p className="text-white/80 text-xl leading-relaxed font-light max-w-3xl mx-auto">
               From our humble beginnings in India to our expanding presence in the UAE and the wider Gulf region, Agromech Hospitality has remained committed to a single goal: delivering the highest quality commercial kitchen and hospitality equipment.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10">
               <div className="space-y-2">
-                <span className="text-[#D4AF37] text-4xl font-black block">50+</span>
+                <span className="text-[#FD8E0E] text-4xl font-black block">50+</span>
                 <span className="text-white/60 text-xs uppercase tracking-widest font-bold">Years Experience</span>
               </div>
               <div className="space-y-2">
-                <span className="text-[#D4AF37] text-4xl font-black block">10k+</span>
+                <span className="text-[#FD8E0E] text-4xl font-black block">10k+</span>
                 <span className="text-white/60 text-xs uppercase tracking-widest font-bold">Sqm Facility</span>
               </div>
               <div className="space-y-2">
-                <span className="text-[#D4AF37] text-4xl font-black block">900+</span>
+                <span className="text-[#FD8E0E] text-4xl font-black block">900+</span>
                 <span className="text-white/60 text-xs uppercase tracking-widest font-bold">Professionals</span>
               </div>
               <div className="space-y-2">
-                <span className="text-[#D4AF37] text-4xl font-black block">100%</span>
+                <span className="text-[#FD8E0E] text-4xl font-black block">100%</span>
                 <span className="text-white/60 text-xs uppercase tracking-widest font-bold">Client Trust</span>
               </div>
             </div>
@@ -223,8 +223,8 @@ const AboutPage = () => {
       <section className="py-24 px-6 bg-zinc-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">Our Core <span className="text-[#D4AF37]">Values</span></h2>
-            <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
+            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">Our Core <span className="text-[#FD8E0E]">Values</span></h2>
+            <div className="w-24 h-1 bg-[#FD8E0E] mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -237,7 +237,7 @@ const AboutPage = () => {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-zinc-100 hover:shadow-2xl transition-all duration-500 group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mb-8 group-hover:bg-[#221F51] group-hover:text-white transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-[#FD8E0E]/10 flex items-center justify-center text-[#FD8E0E] mb-8 group-hover:bg-[#221F51] group-hover:text-white transition-all duration-500">
                   <i className={`fas ${v.icon} text-2xl`}></i>
                 </div>
                 <h3 className="text-xl font-bold text-zinc-900 uppercase tracking-widest mb-4">{v.title}</h3>
@@ -253,10 +253,10 @@ const AboutPage = () => {
       {/* Footer CTA */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-6xl flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight mb-0 leading-none">Ready to partner <br className="hidden md:block" /><span className="text-[#D4AF37]">with Agromech?</span></h2>
+          <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight mb-0 leading-none">Ready to partner <br className="hidden md:block" /><span className="text-[#FD8E0E]">with Agromech?</span></h2>
           <Link
             href="/contact"
-            className="inline-block bg-[#221F51] text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:!bg-[#D4AF37] transition-all no-underline shadow-xl whitespace-nowrap text-sm"
+            className="inline-block bg-[#221F51] text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:!bg-[#FD8E0E] transition-all no-underline shadow-xl whitespace-nowrap text-sm"
           >
             Get In Touch
           </Link>
