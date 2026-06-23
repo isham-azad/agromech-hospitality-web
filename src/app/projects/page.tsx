@@ -70,7 +70,7 @@ const ProjectsPage = () => {
   const [activeTab, setActiveTab] = useState("all");
 
   return (
-    <main className="bg-[#FCFCFC] min-h-screen pt-32 pb-60 text-zinc-900 selection:bg-[#D4AF37] selection:text-white">
+    <main className="bg-[#FCFCFC] min-h-screen pt-32 pb-60 text-zinc-900 selection:bg-[#FD8E0E] selection:text-white">
       {/* Decorative Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-[0.03]">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:40px_40px]"></div>
@@ -85,7 +85,7 @@ const ProjectsPage = () => {
             className="flex flex-col items-center text-center gap-12"
           >
             <div className="space-y-4">
-              <span className="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.5em] block">Our Portfolio</span>
+              <span className="text-[#FD8E0E] text-[10px] font-black uppercase tracking-[0.5em] block">Our Portfolio</span>
               <h1 className="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-none italic">
                 Project <br /> <span className="not-italic text-zinc-100">Archives.</span>
               </h1>
@@ -115,12 +115,12 @@ const ProjectsPage = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`relative py-2 text-[10px] font-black uppercase tracking-[0.3em] transition-all whitespace-nowrap ${activeTab === tab ? "text-[#D4AF37]" : "text-zinc-400 hover:text-zinc-600"
+              className={`relative py-2 text-[10px] font-black uppercase tracking-[0.3em] transition-all whitespace-nowrap ${activeTab === tab ? "text-[#FD8E0E]" : "text-zinc-400 hover:text-zinc-600"
                 }`}
             >
               {tab}
               {activeTab === tab && (
-                <motion.div layoutId="nav-line" className="absolute bottom-0 left-0 w-full h-[2px] bg-[#D4AF37]" />
+                <motion.div layoutId="nav-line" className="absolute bottom-0 left-0 w-full h-[2px] bg-[#FD8E0E]" />
               )}
             </button>
           ))}
@@ -134,7 +134,7 @@ const ProjectsPage = () => {
             <div key={sector.id} className="space-y-24">
               <div className="flex flex-row items-end justify-between gap-4 border-b border-zinc-100 pb-8 md:pb-12">
                 <div className="space-y-2 md:space-y-4 flex-1">
-                  <div className="flex items-center gap-2 md:gap-4 text-[#D4AF37]">
+                  <div className="flex items-center gap-2 md:gap-4 text-[#FD8E0E]">
                     <i className={`fas ${sector.icon} text-[10px] md:text-sm`}></i>
                     <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em]">Sector Archive</span>
                   </div>
@@ -167,7 +167,7 @@ const ProjectsPage = () => {
                       <div className="absolute inset-0 p-4 sm:p-10 flex flex-col justify-between z-10">
                         <div className="flex justify-between items-start">
                           <span className="text-[8px] sm:text-[10px] font-black text-white/50 sm:text-zinc-400 group-hover:text-white transition-colors">{project.id}</span>
-                          <span className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white text-[6px] sm:text-[8px] font-black uppercase tracking-widest text-[#D4AF37] shadow-sm">
+                          <span className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white text-[6px] sm:text-[8px] font-black uppercase tracking-widest text-[#FD8E0E] shadow-sm">
                             {project.status}
                           </span>
                         </div>
@@ -180,7 +180,7 @@ const ProjectsPage = () => {
                         </div>
                       </div>
                       {/* Decorative Element */}
-                      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#D4AF37]/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#FD8E0E]/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
 
                     <div className="px-1 sm:px-4 flex flex-col sm:flex-row justify-between items-start sm:items-end border-l border-zinc-100 ml-2 sm:ml-4 gap-2 sm:gap-0">
@@ -204,11 +204,11 @@ const ProjectsPage = () => {
       {/* Corporate Footer CTA */}
       <section className="container mx-auto px-6 max-w-5xl mt-32 mb-20 relative">
         <div className="bg-zinc-900 rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-[#D4AF37]/5 skew-x-12 translate-x-1/2"></div>
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-[#FD8E0E]/5 skew-x-12 translate-x-1/2"></div>
 
           <div className="relative z-10 space-y-10">
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white leading-tight">
-              Ready to <span className="text-[#D4AF37]">Lead the Industry?</span>
+              Ready to <span className="text-[#FD8E0E]">Lead the Industry?</span>
             </h2>
             <p className="text-white/40 text-lg max-w-xl mx-auto font-light leading-relaxed">
               We provide turnkey solutions for the world's most ambitious hospitality projects. Connect with our global technical team today.
@@ -216,7 +216,7 @@ const ProjectsPage = () => {
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="ag-footer-btn group inline-flex items-center gap-6 bg-[#D4AF37] text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest text-[11px] transition-all duration-300 shadow-xl"
+                className="ag-footer-btn group inline-flex items-center gap-6 bg-[#FD8E0E] text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest text-[11px] transition-all duration-300 shadow-xl"
               >
                 <span>Initiate Consultation</span>
                 <i className="fas fa-arrow-right transition-all duration-300 group-hover:translate-x-1"></i>

@@ -74,7 +74,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-[#FCFCFC] min-h-screen pt-32 pb-40 selection:bg-[#D4AF37] selection:text-white font-sans">
+    <main className="bg-[#FCFCFC] min-h-screen pt-32 pb-40 selection:bg-[#FD8E0E] selection:text-white font-sans">
       {/* Background Ornaments */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-[0.02]">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:32px_32px]"></div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         {/* Header Block */}
         <header className="text-center space-y-6 mb-24">
-          <span className="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.5em] block">
+          <span className="text-[#FD8E0E] text-[10px] font-black uppercase tracking-[0.5em] block">
             Connect With Us
           </span>
           <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none text-zinc-900 italic">
@@ -93,7 +93,7 @@ export default function ContactPage() {
           <p className="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
             Have a project in mind, need commercial kitchen equipment advice, or want to visit our showroom? Reach out to our dedicated team of experts.
           </p>
-          <div className="w-16 h-0.5 bg-[#D4AF37] mx-auto mt-8"></div>
+          <div className="w-16 h-0.5 bg-[#FD8E0E] mx-auto mt-8"></div>
         </header>
 
         {/* Info & Form Section */}
@@ -108,9 +108,9 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 className="space-y-4"
               >
-                <span className="text-[#D4AF37] font-bold text-xs tracking-[0.3em] uppercase block">Get in Touch</span>
+                <span className="text-[#FD8E0E] font-bold text-xs tracking-[0.3em] uppercase block">Get in Touch</span>
                 <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">
-                  How Can We <br /><span className="text-[#D4AF37]">Help You?</span>
+                  How Can We <br /><span className="text-[#FD8E0E]">Help You?</span>
                 </h2>
                 <p className="text-zinc-600 text-lg font-light leading-relaxed">
                   Have a project in mind, need commercial kitchen equipment advice, or want to visit our showroom? Reach out to our dedicated team of experts.
@@ -129,7 +129,7 @@ export default function ContactPage() {
                       }`}
                   >
                     <div>
-                      <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mb-6 group-hover:bg-[#221F51] group-hover:text-white transition-all duration-300">
+                      <div className="w-12 h-12 rounded-xl bg-[#FD8E0E]/10 flex items-center justify-center text-[#FD8E0E] mb-6 group-hover:bg-[#221F51] group-hover:text-white transition-all duration-300">
                         <i className={`fas ${item.icon} text-lg`}></i>
                       </div>
                       <h3 className="text-lg font-bold text-zinc-900 uppercase tracking-wider mb-3">{item.title}</h3>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-bold uppercase tracking-widest text-[#221F51] hover:text-[#D4AF37] transition-colors inline-flex items-center gap-2 mt-auto"
+                        className="text-xs font-bold uppercase tracking-widest text-[#221F51] hover:text-[#FD8E0E] transition-colors inline-flex items-center gap-2 mt-auto"
                       >
                         {item.actionText} <i className="fas fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
                       </a>
@@ -160,7 +160,7 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 className="bg-[#221F51] text-white p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/10 rounded-full blur-3xl"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FD8E0E]/10 rounded-full blur-3xl"></div>
                 <div className="relative z-10 space-y-8">
                   <div className="space-y-2">
                     <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight">Send Us a Message</h3>
@@ -198,7 +198,7 @@ export default function ContactPage() {
                             placeholder="John Doe"
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm"
+                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm"
                           />
                         </div>
                         <div className="space-y-2">
@@ -209,7 +209,7 @@ export default function ContactPage() {
                             placeholder="john@company.com"
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm"
+                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm"
                           />
                         </div>
                       </div>
@@ -222,7 +222,7 @@ export default function ContactPage() {
                             placeholder="+971 50 123 4567"
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm"
+                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm"
                           />
                         </div>
                         <div className="space-y-2">
@@ -232,7 +232,7 @@ export default function ContactPage() {
                             placeholder="e.g. Hotel / Restaurant Name"
                             value={formData.company}
                             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm"
+                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm"
                           />
                         </div>
                       </div>
@@ -245,7 +245,7 @@ export default function ContactPage() {
                           placeholder="How can we assist you?"
                           value={formData.subject}
                           onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm"
+                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm"
                         />
                       </div>
 
@@ -257,14 +257,14 @@ export default function ContactPage() {
                           placeholder="Tell us more about your requirements, project timelines, or specific products you are interested in..."
                           value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm resize-none"
+                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm resize-none"
                         ></textarea>
                       </div>
 
                       <button
                         type="submit"
                         disabled={status === "loading"}
-                        className="w-full bg-[#D4AF37] text-[#221F51] font-bold uppercase tracking-[0.2em] py-4 rounded-xl hover:bg-white hover:text-[#221F51] transition-all duration-300 disabled:opacity-50 text-xs flex items-center justify-center gap-3"
+                        className="w-full bg-[#FD8E0E] text-[#221F51] font-bold uppercase tracking-[0.2em] py-4 rounded-xl hover:bg-white hover:text-[#221F51] transition-all duration-300 disabled:opacity-50 text-xs flex items-center justify-center gap-3"
                       >
                         {status === "loading" ? (
                           <>
@@ -291,7 +291,7 @@ export default function ContactPage() {
                 <div className="h-[350px] relative w-full overflow-hidden">
                   {/* Stylized custom simulated map layout with gorgeous overlays */}
                   <div className="absolute inset-0 bg-[#221F51] flex flex-col items-center justify-center p-8 text-center space-y-4">
-                    <div className="w-16 h-16 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] animate-pulse">
+                    <div className="w-16 h-16 rounded-full bg-[#FD8E0E]/20 border border-[#FD8E0E]/40 flex items-center justify-center text-[#FD8E0E] animate-pulse">
                       <i className="fas fa-map-marker-alt text-2xl"></i>
                     </div>
                     <div className="space-y-2">
@@ -304,7 +304,7 @@ export default function ContactPage() {
                       href="https://maps.google.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white/10 hover:bg-white/20 text-[#D4AF37] hover:text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 border border-[#D4AF37]/30"
+                      className="bg-white/10 hover:bg-white/20 text-[#FD8E0E] hover:text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 border border-[#FD8E0E]/30"
                     >
                       <i className="fas fa-route mr-2"></i> Get Route Map
                     </a> */}
