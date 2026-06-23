@@ -109,11 +109,11 @@ export default function JourneyPage() {
             transition={{ duration: 0.8 }}
             className=" p-8 md:p-12 text-center max-w-3xl"
           >
-            <span className="text-[#D4AF37] font-bold uppercase tracking-[0.4em] mb-4 block text-xs md:text-sm">Est. 1974</span>
+            <span className="text-[#FD8E0E] font-bold uppercase tracking-[0.4em] mb-4 block text-xs md:text-sm">Est. 1974</span>
             <h1 className="text-3xl md:text-6xl font-black text-white uppercase tracking-tight mb-4 animate-fade-in">
-              Our Journey <span className="text-[#D4AF37]">In India</span>
+              Our Journey <span className="text-[#FD8E0E]">In India</span>
             </h1>
-            <div className="w-16 h-0.5 bg-[#D4AF37] mx-auto mb-6"></div>
+            <div className="w-16 h-0.5 bg-[#FD8E0E] mx-auto mb-6"></div>
             <p className="text-white/95 text-sm md:text-lg font-light leading-relaxed">
               Five decades of defining hospitality excellence, from local roots to global horizons.
             </p>
@@ -132,7 +132,7 @@ export default function JourneyPage() {
               className="w-full md:w-1/2 space-y-6 md:space-y-8"
             >
               <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-                A Legacy Built <span className="text-[#D4AF37]">on Trust</span>
+                A Legacy Built <span className="text-[#FD8E0E]">on Trust</span>
               </h2>
               <p className="text-white/80 leading-relaxed text-base md:text-lg font-light">
                 Agromech India operates a state-of-the-art stainless steel fabrication and commercial kitchen equipment manufacturing facility in Hyderabad, India, spread across approximately 10,000 square meters.
@@ -212,7 +212,7 @@ export default function JourneyPage() {
                     }`}>
                     <div className="flex flex-col sm:flex-row sm:items-start gap-5">
                       {milestone.image && (
-                        <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-[#D4AF37]/30 shrink-0 shadow-md">
+                        <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-[#FD8E0E]/30 shrink-0 shadow-md">
                           <Image
                             src={milestone.image}
                             alt={milestone.title}
@@ -222,7 +222,7 @@ export default function JourneyPage() {
                         </div>
                       )}
                       <div className="flex-1">
-                        <span className="text-[#D4AF37] font-black text-3xl md:text-4xl block mb-2 md:mb-4">{milestone.year}</span>
+                        <span className="text-[#FD8E0E] font-black text-3xl md:text-4xl block mb-2 md:mb-4">{milestone.year}</span>
                         <h3 className="text-xl md:text-3xl font-bold text-zinc-900 mb-2 md:mb-4">{milestone.title}</h3>
                         <p className="text-zinc-600 leading-relaxed text-sm md:text-lg">
                           {milestone.description}
@@ -234,7 +234,7 @@ export default function JourneyPage() {
 
                 {/* Dot in Center */}
                 <div className="absolute left-6 md:left-1/2 top-10 md:top-2 -translate-x-1/2 -translate-y-1/2 z-10 mobile-dot-adjust">
-                  <div className="w-5 h-5 md:w-6 md:h-6 bg-[#D4AF37] rounded-full border-4 border-white shadow-lg shadow-[#D4AF37]/30 ring-4 md:ring-8 ring-[#D4AF37]/10"></div>
+                  <div className="w-5 h-5 md:w-6 md:h-6 bg-[#FD8E0E] rounded-full border-4 border-white shadow-lg shadow-[#FD8E0E]/30 ring-4 md:ring-8 ring-[#FD8E0E]/10"></div>
                 </div>
 
                 {/* Spacer for alternating layout */}
@@ -250,19 +250,19 @@ export default function JourneyPage() {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-6xl font-black text-[#D4AF37] mb-2">50+</div>
+              <div className="text-3xl md:text-6xl font-black text-[#FD8E0E] mb-2">50+</div>
               <div className="text-xs md:text-sm uppercase tracking-widest text-white/60">Years of Experience</div>
             </div>
             <div>
-              <div className="text-3xl md:text-6xl font-black text-[#D4AF37] mb-2">5.2L+</div>
+              <div className="text-3xl md:text-6xl font-black text-[#FD8E0E] mb-2">5.2L+</div>
               <div className="text-xs md:text-sm uppercase tracking-widest text-white/60">Sq. Ft. Operational Space</div>
             </div>
             <div>
-              <div className="text-3xl md:text-6xl font-black text-[#D4AF37] mb-2">500+</div>
+              <div className="text-3xl md:text-6xl font-black text-[#FD8E0E] mb-2">500+</div>
               <div className="text-xs md:text-sm uppercase tracking-widest text-white/60">Global Brands</div>
             </div>
             <div>
-              <div className="text-3xl md:text-6xl font-black text-[#D4AF37] mb-2">100%</div>
+              <div className="text-3xl md:text-6xl font-black text-[#FD8E0E] mb-2">100%</div>
               <div className="text-xs md:text-sm uppercase tracking-widest text-white/60">Client Satisfaction</div>
             </div>
           </div>
@@ -272,10 +272,10 @@ export default function JourneyPage() {
       {/* Footer CTA */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-6 max-w-6xl flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
-          <h2 className="text-2xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight mb-0">Ready to start your <span className="text-[#D4AF37]">journey with us?</span></h2>
+          <h2 className="text-2xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight mb-0">Ready to start your <span className="text-[#FD8E0E]">journey with us?</span></h2>
           <Link
             href="/contact"
-            className="inline-block bg-[#221F51] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:!bg-[#D4AF37] transition-all no-underline shadow-xl whitespace-nowrap text-xs md:text-sm"
+            className="inline-block bg-[#221F51] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:!bg-[#FD8E0E] transition-all no-underline shadow-xl whitespace-nowrap text-xs md:text-sm"
           >
             Get In Touch
           </Link>

@@ -55,7 +55,7 @@ const AboutSection = () => {
             <div className="flex gap-4 mt-4">
               <Link
                 href="/journey"
-                className="relative z-10 bg-white !text-zinc-900 px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:!bg-[#D4AF37] hover:!text-white transition-all duration-300 shadow-lg no-underline inline-block text-sm"
+                className="relative z-10 bg-white !text-zinc-900 px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:!bg-[#FD8E0E] hover:!text-white transition-all duration-300 shadow-lg no-underline inline-block text-sm"
               >
                 Our Journey In India
               </Link>

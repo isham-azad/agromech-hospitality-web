@@ -1,8 +1,41 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 
 const Footer = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setStatus("loading");
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email }),
+      });
+
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setStatus("success");
+        setName("");
+        setEmail("");
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Subscription error:", error);
+      setStatus("error");
+    }
+  };
+
   return (
     <footer className="footer-section">
       <div className="container-fluid px-4 relative">
@@ -19,19 +52,57 @@ const Footer = () => {
                 <span>Subscribe to Newsletter</span>
               </h3>
 
-              <form action="#" className="row g-3 justify-content-center">
-                <div className="col-6 col-md-auto">
-                  <input type="text" className="form-control" placeholder="Enter your name" />
+              {status === "success" ? (
+                <div className="text-center py-3">
+                  <p className="text-emerald-500 font-bold uppercase tracking-wider text-xs mb-0">
+                    <span className="fa fa-check-circle me-2"></span> Thank you for subscribing!
+                  </p>
                 </div>
-                <div className="col-6 col-md-auto">
-                  <input type="email" className="form-control" placeholder="Enter your email" />
-                </div>
-                <div className="col-12 col-md-auto">
-                  <button className="btn btn-secondary w-100">
-                    <span className="fa fa-paper-plane"></span>
-                  </button>
-                </div>
-              </form>
+              ) : (
+                <form onSubmit={handleSubscribe} className="row g-3 justify-content-center">
+                  <div className="col-6 col-md-auto">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Enter your name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      disabled={status === "loading"}
+                    />
+                  </div>
+                  <div className="col-6 col-md-auto">
+                    <input
+                      type="email"
+                      required
+                      className="form-control"
+                      placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      disabled={status === "loading"}
+                    />
+                  </div>
+                  <div className="col-12 col-md-auto">
+                    <button
+                      type="submit"
+                      disabled={status === "loading"}
+                      className="btn btn-secondary w-100 select-none d-flex align-items-center justify-content-center gap-2"
+                      style={{ minWidth: "50px", height: "50px" }}
+                    >
+                      {status === "loading" ? (
+                        <span className="fa fa-spinner fa-spin"></span>
+                      ) : (
+                        <span className="fa fa-paper-plane"></span>
+                      )}
+                    </button>
+                  </div>
+                </form>
+              )}
+
+              {status === "error" && (
+                <p className="text-rose-400 text-center text-[10px] uppercase tracking-widest mt-3 mb-0">
+                  Subscription failed. Please try again.
+                </p>
+              )}
 
             </div>
           </div>

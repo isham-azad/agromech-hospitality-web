@@ -82,7 +82,7 @@ const collectionsList: CollectionItem[] = [
 
 export default function CollectionsPage() {
   return (
-    <main className="bg-[#FCFCFC] min-h-screen pt-32 pb-40 selection:bg-[#D4AF37] selection:text-white font-sans">
+    <main className="bg-[#FCFCFC] min-h-screen pt-32 pb-40 selection:bg-[#FD8E0E] selection:text-white font-sans">
       {/* Ornamental Subtle Background */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-[0.02] z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:32px_32px]"></div>
@@ -91,7 +91,7 @@ export default function CollectionsPage() {
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         {/* Header Block */}
         <header className="text-center space-y-6 mb-20">
-          <span className="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.5em] block">
+          <span className="text-[#FD8E0E] text-[10px] font-black uppercase tracking-[0.5em] block">
             Premium Brands
           </span>
           <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none text-zinc-900 italic">
@@ -101,7 +101,7 @@ export default function CollectionsPage() {
           <p className="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
             Discover our curated, world-renowned hospitality collections tailored to deliver unmatched aesthetic excellence and commercial durability.
           </p>
-          <div className="w-16 h-0.5 bg-[#D4AF37] mx-auto mt-8"></div>
+          <div className="w-16 h-0.5 bg-[#FD8E0E] mx-auto mt-8"></div>
         </header>
 
         {/* Collections Grid - 4 items per line on large screens */}
@@ -125,14 +125,14 @@ export default function CollectionsPage() {
                     className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  <span className="absolute top-4 left-4 bg-zinc-950/80 backdrop-blur-md text-[#D4AF37] text-[8px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
+                  <span className="absolute top-4 left-4 bg-zinc-950/80 backdrop-blur-md text-[#FD8E0E] text-[8px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
                     {item.category}
                   </span>
                 </div>
 
                 {/* Text Content */}
                 <div className="p-6 space-y-3">
-                  <h3 className="text-zinc-900 font-bold uppercase tracking-tight text-lg leading-snug group-hover:text-[#D4AF37] transition-colors duration-300">
+                  <h3 className="text-zinc-900 font-bold uppercase tracking-tight text-lg leading-snug group-hover:text-[#FD8E0E] transition-colors duration-300">
                     {item.title}
                   </h3>
                   <p className="text-zinc-400 text-xs font-light leading-relaxed line-clamp-3">

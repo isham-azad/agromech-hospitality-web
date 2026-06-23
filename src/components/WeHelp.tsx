@@ -61,7 +61,7 @@ const WeHelp = () => {
               <div className="absolute -top-5 -left-5 w-40 h-40 opacity-10 -z-10">
                 <div className="grid grid-cols-6 gap-2">
                   {[...Array(30)].map((_, i) => (
-                    <div key={i} className="w-1 h-1 bg-[#D4AF37] rounded-full"></div>
+                    <div key={i} className="w-1 h-1 bg-[#FD8E0E] rounded-full"></div>
                   ))}
                 </div>
               </div>
@@ -76,7 +76,7 @@ const WeHelp = () => {
             className="flex flex-col gap-6 sm:gap-8 ps-lg-12"
           >
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#211e51] leading-tight">
-              We Help <span className="text-[#D4AF37]">Our Clients Succeed</span>
+              We Help <span className="text-[#FD8E0E]">Our Clients Succeed</span>
             </h2>
             {/* <p className="text-zinc-600 leading-relaxed text-base">
               At Agromech Hospitality, we are dedicated to elevating operational standards and enhancing guest experiences for our partners through innovative products and specialized expertise.
@@ -103,7 +103,7 @@ const WeHelp = () => {
               ].map((item, i) => (
                 <div key={i} className="flex flex-col gap-2 group">
                   <div className="flex items-start gap-2.5">
-                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-[#D4AF37] group-hover:scale-125 transition-transform flex-shrink-0"></div>
+                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-[#FD8E0E] group-hover:scale-125 transition-transform flex-shrink-0"></div>
                     <h5 className="text-base font-bold text-zinc-900 uppercase tracking-wide leading-tight">{item.title}</h5>
                   </div>
                   <div className="ps-4">

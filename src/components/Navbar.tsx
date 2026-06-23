@@ -89,7 +89,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-900 hover:text-[#D4AF37] transition-colors no-underline"
+                  className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-900 hover:text-[#FD8E0E] transition-colors no-underline"
                 >
                   {link.name}
                 </Link>
@@ -103,7 +103,7 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-900 hover:text-[#D4AF37] transition-colors no-underline"
+                    className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-900 hover:text-[#FD8E0E] transition-colors no-underline"
                   >
                     {link.name}
                   </Link>
@@ -111,7 +111,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={() => setIsEnquiryOpen(true)}
-                className="bg-[#221F51] text-white text-[10px] font-bold uppercase tracking-[0.2em] px-6 py-2.5 hover:bg-[#D4AF37] hover:text-[#221F51] transition-all no-underline focus:outline-none flex items-center gap-2"
+                className="bg-[#221F51] text-white text-[10px] font-bold uppercase tracking-[0.2em] px-6 py-2.5 hover:bg-[#FD8E0E] hover:text-[#221F51] transition-all no-underline focus:outline-none flex items-center gap-2"
               >
                 <i className="fas fa-contact-card"></i>
                 <span>Enquire Now</span>
@@ -122,7 +122,7 @@ const Navbar = () => {
             <div className="md:hidden flex items-center gap-3 z-10">
               <button
                 onClick={() => setIsEnquiryOpen(true)}
-                className="bg-[#221F51] text-white text-[8px] font-black uppercase tracking-[0.1em] px-3 py-1.5 hover:bg-[#D4AF37] hover:text-[#221F51] transition-all no-underline focus:outline-none flex items-center gap-1 mobile-enquire-btn"
+                className="bg-[#221F51] text-white text-[8px] font-black uppercase tracking-[0.1em] px-3 py-1.5 hover:bg-[#FD8E0E] hover:text-[#221F51] transition-all no-underline focus:outline-none flex items-center gap-1 mobile-enquire-btn"
               >
                 <i className="fas fa-contact-card text-[10px]"></i>
                 <span>Enquire</span>
@@ -153,7 +153,7 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="text-xs font-bold uppercase tracking-widest text-zinc-900 hover:text-[#D4AF37] no-underline"
+                    className="text-xs font-bold uppercase tracking-widest text-zinc-900 hover:text-[#FD8E0E] no-underline"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}

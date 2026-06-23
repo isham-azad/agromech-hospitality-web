@@ -46,14 +46,14 @@ const PopularProduct = () => {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="flex justify-between items-center mb-12 mt-5">
           <div className="space-y-2">
-            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">Our <span className="text-[#D4AF37]">Services</span></h2>
-            <div className="w-20 h-1 bg-[#D4AF37]"></div>
+            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight">Our <span className="text-[#FD8E0E]">Services</span></h2>
+            <div className="w-20 h-1 bg-[#FD8E0E]"></div>
           </div>
           <div className="flex gap-4">
-            <button id="service-prev" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all">
+            <button id="service-prev" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:border-[#FD8E0E] hover:text-[#FD8E0E] transition-all">
               <i className="fas fa-chevron-left"></i>
             </button>
-            <button id="service-next" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all">
+            <button id="service-next" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:border-[#FD8E0E] hover:text-[#FD8E0E] transition-all">
               <i className="fas fa-chevron-right"></i>
             </button>
           </div>
@@ -104,7 +104,7 @@ const PopularProduct = () => {
                   </p>
                   <button
                     onClick={() => setSelectedService(s)}
-                    className="text-xs font-bold tracking-[0.2em] uppercase text-[#D4AF37] border-b-2 border-[#D4AF37]/20 hover:border-[#D4AF37] transition-all pt-2 flex items-center gap-2 group/btn self-start"
+                    className="text-xs font-bold tracking-[0.2em] uppercase text-[#FD8E0E] border-b-2 border-[#FD8E0E]/20 hover:border-[#FD8E0E] transition-all pt-2 flex items-center gap-2 group/btn self-start"
                   >
                     Read More
                     <i className="fas fa-arrow-right text-[10px] transform group-hover/btn:translate-x-1 transition-transform"></i>
@@ -135,7 +135,7 @@ const PopularProduct = () => {
             >
               <button
                 onClick={() => setSelectedService(null)}
-                className="absolute top-6 right-6 w-12 h-12 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 hover:bg-[#D4AF37] hover:text-white transition-all z-20"
+                className="absolute top-6 right-6 w-12 h-12 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 hover:bg-[#FD8E0E] hover:text-white transition-all z-20"
               >
                 <i className="fas fa-times text-xl"></i>
               </button>
@@ -151,9 +151,9 @@ const PopularProduct = () => {
                 </div>
                 <div className="w-full lg:w-1/2 p-8 md:p-16 space-y-8 flex flex-col justify-center">
                   <div className="space-y-4">
-                    <span className="text-[#D4AF37] font-bold text-xs tracking-[0.4em] uppercase block">Our Services</span>
+                    <span className="text-[#FD8E0E] font-bold text-xs tracking-[0.4em] uppercase block">Our Services</span>
                     <h2 className="text-4xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight leading-none">{selectedService.name}</h2>
-                    <div className="w-16 h-1 bg-[#D4AF37]"></div>
+                    <div className="w-16 h-1 bg-[#FD8E0E]"></div>
                   </div>
                   <p className="text-zinc-600 leading-relaxed text-lg font-light">
                     {selectedService.desc}
