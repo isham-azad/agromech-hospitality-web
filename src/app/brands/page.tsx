@@ -921,7 +921,7 @@ export default function BrandsPage() {
   }, [selectedCategory, searchQuery]);
 
   return (
-    <main className="bg-[#FCFCFC] min-h-screen pt-32 pb-40 selection:bg-[#D4AF37] selection:text-white font-sans">
+    <main className="bg-[#FCFCFC] min-h-screen pt-32 pb-40 selection:bg-[#FD8E0E] selection:text-white font-sans">
       {/* CSS overrides for absolute scrollbar hiding and mobile responsiveness */}
       <style jsx global>{`
         .no-scrollbar::-webkit-scrollbar {
@@ -976,7 +976,7 @@ export default function BrandsPage() {
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         {/* Header Block */}
         <header className="text-center space-y-6 mb-24">
-          <span className="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.5em] block">
+          <span className="text-[#FD8E0E] text-[10px] font-black uppercase tracking-[0.5em] block">
             Partner Portfolio
           </span>
           <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none text-zinc-900 italic">
@@ -986,7 +986,7 @@ export default function BrandsPage() {
           <p className="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
             Partnering with over 90 world-class manufacturers from Europe, USA, and Asia to bring certified commercial quality to your hospitality projects.
           </p>
-          <div className="w-16 h-0.5 bg-[#D4AF37] mx-auto mt-8"></div>
+          <div className="w-16 h-0.5 bg-[#FD8E0E] mx-auto mt-8"></div>
         </header>
 
         {/* Search Input */}
@@ -1000,7 +1000,7 @@ export default function BrandsPage() {
               placeholder="Search by brand, country or craft..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white border border-zinc-100 rounded-full py-3.5 pl-12 pr-4 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-[#D4AF37] focus:shadow-md transition-all duration-300"
+              className="w-full bg-white border border-zinc-100 rounded-full py-3.5 pl-12 pr-4 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-[#FD8E0E] focus:shadow-md transition-all duration-300"
             />
           </div>
         </div>
@@ -1038,7 +1038,7 @@ export default function BrandsPage() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => setSelectedBrand(brand)}
-                className="brand-card group bg-white rounded-[2rem] border border-zinc-100 p-7 shadow-sm hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#D4AF37]/30 transition-all duration-400 flex flex-col justify-between cursor-pointer"
+                className="brand-card group bg-white rounded-[2rem] border border-zinc-100 p-7 shadow-sm hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#FD8E0E]/30 transition-all duration-400 flex flex-col justify-between cursor-pointer"
               >
                 <div>
                   {/* Brand Card Logo Box with Extracted Image */}
@@ -1062,7 +1062,7 @@ export default function BrandsPage() {
                   <div className="brand-desktop-details">
                     {/* Metadata tags */}
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="px-2.5 py-0.5 rounded bg-[#D4AF37]/10 text-[7px] font-black uppercase tracking-widest text-[#D4AF37]">
+                      <span className="px-2.5 py-0.5 rounded bg-[#FD8E0E]/10 text-[7px] font-black uppercase tracking-widest text-[#FD8E0E]">
                         {brand.category}
                       </span>
                       <span className="text-[8px] text-zinc-400 italic">
@@ -1084,7 +1084,7 @@ export default function BrandsPage() {
 
                 {/* Desktop-only bottom actions */}
                 <div className="brand-desktop-actions pt-4 border-t border-zinc-50 flex items-center justify-between mt-auto">
-                  <span className="text-[8px] font-black uppercase tracking-widest text-[#221F51] group-hover:text-[#D4AF37] transition-all flex items-center gap-1">
+                  <span className="text-[8px] font-black uppercase tracking-widest text-[#221F51] group-hover:text-[#FD8E0E] transition-all flex items-center gap-1">
                     <span>Brand Story</span>
                     <i className="fas fa-plus text-[6px]"></i>
                   </span>
@@ -1096,7 +1096,7 @@ export default function BrandsPage() {
                 {/* Mobile-only bottom minimal indicator */}
                 <div className="brand-mobile-footer hidden justify-between items-center mt-2.5 pt-2 border-t border-zinc-100/50 text-[8px] font-bold text-zinc-500">
                   <span className="text-[#221F51] truncate max-w-[70%] uppercase tracking-wider">{brand.name}</span>
-                  <span className="text-[#D4AF37] flex items-center gap-0.5 text-[7px]">
+                  <span className="text-[#FD8E0E] flex items-center gap-0.5 text-[7px]">
                     <span>Story</span>
                     <i className="fas fa-plus text-[5px]"></i>
                   </span>
@@ -1143,7 +1143,7 @@ export default function BrandsPage() {
                 {/* Drawer Header */}
                 <div className="flex justify-between items-start mb-8 border-b border-white/10 pb-5">
                   <div>
-                    <span className="text-[#D4AF37] text-[8px] font-black uppercase tracking-[0.4em] block mb-2">
+                    <span className="text-[#FD8E0E] text-[8px] font-black uppercase tracking-[0.4em] block mb-2">
                       Partner Profile &mdash; Est. {selectedBrand.est}
                     </span>
                     <div className="bg-white/95 rounded-xl p-4 inline-flex items-center justify-center shadow-md">
@@ -1166,20 +1166,20 @@ export default function BrandsPage() {
                 <div className="space-y-6">
                   <div className="grid grid-cols-2 gap-4 bg-white/5 border border-white/10 rounded-xl p-4">
                     <div>
-                      <span className="text-[8px] font-black uppercase tracking-widest text-[#D4AF37] block mb-1">Country</span>
+                      <span className="text-[8px] font-black uppercase tracking-widest text-[#FD8E0E] block mb-1">Country</span>
                       <span className="text-xs font-bold text-white flex items-center gap-1.5">
                         <i className="fas fa-globe-europe text-xs text-white/40"></i>
                         {selectedBrand.country}
                       </span>
                     </div>
                     <div>
-                      <span className="text-[8px] font-black uppercase tracking-widest text-[#D4AF37] block mb-1">Segment</span>
+                      <span className="text-[8px] font-black uppercase tracking-widest text-[#FD8E0E] block mb-1">Segment</span>
                       <span className="text-xs font-bold text-white">{selectedBrand.category}</span>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <h4 className="text-[8px] font-black uppercase tracking-widest text-[#D4AF37]">Primary Specialization</h4>
+                    <h4 className="text-[8px] font-black uppercase tracking-widest text-[#FD8E0E]">Primary Specialization</h4>
                     <p className="text-white text-sm font-semibold">{selectedBrand.specialty}</p>
                   </div>
 
@@ -1197,7 +1197,7 @@ export default function BrandsPage() {
                 <Link
                   href="/catalogues"
                   onClick={() => setSelectedBrand(null)}
-                  className="w-full bg-[#D4AF37] hover:bg-[#b8962d] text-white py-3 rounded-lg font-bold uppercase tracking-widest text-[9px] transition-all active:scale-[0.98] focus:outline-none flex justify-center items-center gap-1.5 text-center no-underline shadow-md"
+                  className="w-full bg-[#FD8E0E] hover:bg-[#e07a0c] text-white py-3 rounded-lg font-bold uppercase tracking-widest text-[9px] transition-all active:scale-[0.98] focus:outline-none flex justify-center items-center gap-1.5 text-center no-underline shadow-md"
                 >
                   <i className="fas fa-book-open"></i>
                   <span>Go to Catalogues Vault</span>

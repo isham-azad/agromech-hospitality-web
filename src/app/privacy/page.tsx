@@ -14,7 +14,7 @@ export default function PrivacyPage() {
         >
           <div className="text-center pb-6 border-b border-zinc-100">
             <h1 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight mb-4">
-              Privacy <span className="text-[#D4AF37]">Policy</span>
+              Privacy <span className="text-[#FD8E0E]">Policy</span>
             </h1>
             <p className="text-zinc-500 text-sm font-light">Last Updated: June 2026</p>
           </div>
@@ -101,7 +101,7 @@ export default function PrivacyPage() {
               <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">11. Contact Us</h2>
               <p>If you have any questions or concerns about this Privacy Policy or how we handle your personal data, please contact us at:</p>
               <p className="font-medium text-zinc-900 mt-2">
-                Email: <a href="mailto:info@agromechhospitaliy.com" className="text-[#D4AF37] hover:underline">info@agromechhospitaliy.com</a>
+                Email: <a href="mailto:info@agromechhospitaliy.com" className="text-[#FD8E0E] hover:underline">info@agromechhospitaliy.com</a>
               </p>
             </section>
           </div>

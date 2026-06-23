@@ -311,7 +311,7 @@ export default function CategoryPage() {
       <div className="min-h-screen flex items-center justify-center bg-zinc-50">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Category Not Found</h1>
-          <Link href="/" className="text-[#D4AF37] hover:underline">Return Home</Link>
+          <Link href="/" className="text-[#FD8E0E] hover:underline">Return Home</Link>
         </div>
       </div>
     );
@@ -349,9 +349,9 @@ export default function CategoryPage() {
             className="p-8 md:p-14 rounded-[2.5rem] text-center max-w-4xl"
           >
             <h1 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tight mb-4">
-              {data.title} <span className="text-[#D4AF37]">{data.subtitle}</span>
+              {data.title} <span className="text-[#FD8E0E]">{data.subtitle}</span>
             </h1>
-            <div className="w-20 h-1 bg-[#D4AF37] mx-auto"></div>
+            <div className="w-20 h-1 bg-[#FD8E0E] mx-auto"></div>
           </motion.div>
         </div>
       </section>
@@ -402,10 +402,10 @@ export default function CategoryPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight mb-4">
               {data.solutionsTitle.split(' ').map((word: string, i: number) =>
-                word.toLowerCase() === 'solutions' ? <span key={i} className="text-[#D4AF37]">{word} </span> : word + ' '
+                word.toLowerCase() === 'solutions' ? <span key={i} className="text-[#FD8E0E]">{word} </span> : word + ' '
               )}
             </h2>
-            <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
+            <div className="w-24 h-1 bg-[#FD8E0E] mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -418,7 +418,7 @@ export default function CategoryPage() {
                 transition={{ delay: index * 0.05 }}
                 className="bg-white p-8 rounded-3xl shadow-sm border border-zinc-100 flex flex-col gap-4 group hover:shadow-xl transition-all hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#221F51] group-hover:text-white transition-all">
+                <div className="w-12 h-12 rounded-full bg-[#FD8E0E]/10 flex items-center justify-center text-[#FD8E0E] group-hover:bg-[#221F51] group-hover:text-white transition-all">
                   <i className="fas fa-check text-sm"></i>
                 </div>
                 <div className="space-y-2">
@@ -500,11 +500,11 @@ export default function CategoryPage() {
           `}</style>
           <div className={`${data.brands.length > 6 ? "container-fluid px-5" : "container mx-auto px-6 max-w-6xl"}`}>
             <div className="text-center mb-16">
-              <span className="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.5em] block mb-3">Our Partners</span>
+              <span className="text-[#FD8E0E] text-[10px] font-black uppercase tracking-[0.5em] block mb-3">Our Partners</span>
               <h2 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight mb-4">
-                Trusted <span className="text-[#D4AF37]">Brands</span>
+                Trusted <span className="text-[#FD8E0E]">Brands</span>
               </h2>
-              <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
+              <div className="w-24 h-1 bg-[#FD8E0E] mx-auto"></div>
             </div>
 
             {data.brands.length > 6 ? (
@@ -602,7 +602,7 @@ export default function CategoryPage() {
           <h2 className="text-2xl md:text-4xl font-bold uppercase tracking-widest mb-0">Need a Custom Solution?</h2>
           <button
             onClick={() => window.dispatchEvent(new Event("open-enquiry-drawer"))}
-            className="inline-block bg-[#D4AF37] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:!bg-white hover:!text-[#221F51] transition-all no-underline shadow-xl whitespace-nowrap text-xs md:text-sm"
+            className="inline-block bg-[#FD8E0E] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:!bg-white hover:!text-[#221F51] transition-all no-underline shadow-xl whitespace-nowrap text-xs md:text-sm"
           >
             Enquire Now
           </button>

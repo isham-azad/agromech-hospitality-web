@@ -79,7 +79,7 @@ const Hero = () => {
                   className="backdrop-blur-md bg-black/15 border border-white/5 p-6 sm:p-10 md:p-16 rounded-[1.5rem] sm:rounded-[2.5rem] shadow-2xl"
                 >
                   <h1 className="text-white text-3xl sm:text-5xl md:text-7xl font-bold mb-6 sm:mb-8 leading-[1.1]">
-                    {slides[index].title} <span className="block font-normal mt-2 text-[#D4AF37]">{slides[index].subtitle}</span>
+                    {slides[index].title} <span className="block font-normal mt-2 text-[#FD8E0E]">{slides[index].subtitle}</span>
                   </h1>
                   <p className="text-white mb-12 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed font-light opacity-90">
                     {slides[index].description}
@@ -87,7 +87,7 @@ const Hero = () => {
                   <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                     <Link
                       href="/shop"
-                      className="bg-[#D4AF37] text-white text-[12px] font-bold uppercase tracking-widest px-10 py-4 hover:bg-[#b8962d] transition-all hover:shadow-xl active:scale-95 w-52 sm:w-auto text-center no-underline rounded-full"
+                      className="bg-[#FD8E0E] text-white text-[12px] font-bold uppercase tracking-widest px-10 py-4 hover:bg-[#e07a0c] transition-all hover:shadow-xl active:scale-95 w-52 sm:w-auto text-center no-underline rounded-full"
                     >
                       Shop Now
                     </Link>
@@ -111,7 +111,7 @@ const Hero = () => {
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`w-1 h-12 transition-all duration-500 focus:outline-none ${index === i ? "bg-[#D4AF37] scale-x-150" : "bg-white/30 hover:bg-white/50"
+            className={`w-1 h-12 transition-all duration-500 focus:outline-none ${index === i ? "bg-[#FD8E0E] scale-x-150" : "bg-white/30 hover:bg-white/50"
               }`}
             aria-label={`Go to slide ${i + 1}`}
           />
@@ -131,7 +131,7 @@ const Hero = () => {
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
-              className="text-[#D4AF37] text-xl"
+              className="text-[#FD8E0E] text-xl"
             >
               <i className="fas fa-chevron-down"></i>
             </motion.div>

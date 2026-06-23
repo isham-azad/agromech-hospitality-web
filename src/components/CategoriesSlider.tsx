@@ -150,7 +150,7 @@ const CategoriesSlider = () => {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/2 transition-colors"></div>
                 </div>
                 <div className="w-full text-center">
-                  <h5 className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.05em] text-zinc-900 group-hover:text-[#D4AF37] transition-all whitespace-pre-wrap text-ellipsis px-2">
+                  <h5 className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.05em] text-zinc-900 group-hover:text-[#FD8E0E] transition-all whitespace-pre-wrap text-ellipsis px-2">
                     {cat.name}
                   </h5>
                 </div>

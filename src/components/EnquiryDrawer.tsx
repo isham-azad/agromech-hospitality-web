@@ -111,12 +111,12 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
             {/* Header */}
             <div className="p-6 sm:p-8 border-b border-white/10 flex items-center justify-between">
               <div>
-                <span className="text-[#D4AF37] font-bold text-[10px] tracking-[0.3em] uppercase block mb-1">Enquiry Form</span>
+                <span className="text-[#FD8E0E] font-bold text-[10px] tracking-[0.3em] uppercase block mb-1">Enquiry Form</span>
                 <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white mb-0">Enquire Now</h3>
               </div>
               <button
                 onClick={onClose}
-                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#221F51] transition-all duration-300"
+                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#FD8E0E] hover:text-[#221F51] transition-all duration-300"
               >
                 <i className="fas fa-times text-sm"></i>
               </button>
@@ -139,7 +139,7 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
                   </p>
                   <button
                     onClick={() => setStatus("idle")}
-                    className="mt-6 px-8 py-3 bg-[#D4AF37] hover:bg-white text-[#221F51] font-bold uppercase tracking-widest text-xs rounded-xl transition-all duration-300"
+                    className="mt-6 px-8 py-3 bg-[#FD8E0E] hover:bg-white text-[#221F51] font-bold uppercase tracking-widest text-xs rounded-xl transition-all duration-300"
                   >
                     Send Another Enquiry
                   </button>
@@ -155,7 +155,7 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
                       placeholder="Enter your name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm"
                     />
                   </div>
 
@@ -168,7 +168,7 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
                       placeholder="Enter your email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm"
                     />
                   </div>
 
@@ -181,7 +181,7 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
                       placeholder="e.g. +971 50 123 4567"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm"
                     />
                   </div>
 
@@ -193,7 +193,7 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
                         required
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-white focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm appearance-none cursor-pointer"
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-white focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm appearance-none cursor-pointer"
                       >
                         <option value="" disabled className="bg-[#221F51] text-white/40">Select a solution</option>
                         {serviceOptions.map((opt, i) => (
@@ -217,7 +217,7 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
                       placeholder="Outline your requirements or project details..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all text-sm resize-none"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-[#FD8E0E] focus:bg-white/10 transition-all text-sm resize-none"
                     ></textarea>
                   </div>
 
@@ -225,7 +225,7 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full bg-[#D4AF37] text-[#221F51] font-bold uppercase tracking-[0.2em] py-3.5 sm:py-4 rounded-xl hover:bg-white hover:text-[#221F51] transition-all duration-300 disabled:opacity-50 text-xs flex items-center justify-center gap-3 mt-4"
+                    className="w-full bg-[#FD8E0E] text-[#221F51] font-bold uppercase tracking-[0.2em] py-3.5 sm:py-4 rounded-xl hover:bg-white hover:text-[#221F51] transition-all duration-300 disabled:opacity-50 text-xs flex items-center justify-center gap-3 mt-4 select-none"
                   >
                     {status === "loading" ? (
                       <>
@@ -249,12 +249,12 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
             {/* Footer handles */}
             <div className="p-6 sm:p-8 border-t border-white/10 bg-white/5 space-y-4 pb-safe">
               <div className="flex items-center gap-4 text-sm text-white/60">
-                <i className="fas fa-envelope text-[#D4AF37]"></i>
-                <a href="mailto:info@agromech.ae" className="text-white hover:text-[#D4AF37] transition-colors">info@agromechhospitality.com</a>
+                <i className="fas fa-envelope text-[#FD8E0E]"></i>
+                <a href="mailto:info@agromech.ae" className="text-white hover:text-[#FD8E0E] transition-colors">info@agromechhospitality.com</a>
               </div>
               <div className="flex items-center gap-4 text-sm text-white/60">
-                <i className="fas fa-phone-alt text-[#D4AF37]"></i>
-                <a href="tel:+97143469900" className="text-white hover:text-[#D4AF37] transition-colors">+971 4 346 9900</a>
+                <i className="fas fa-phone-alt text-[#FD8E0E]"></i>
+                <a href="tel:+971545844774" className="text-white hover:text-[#FD8E0E] transition-colors">+971 54 584 4774</a>
               </div>
             </div>
           </motion.div>
