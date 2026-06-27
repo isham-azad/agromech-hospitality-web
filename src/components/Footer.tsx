@@ -132,9 +132,9 @@ const Footer = () => {
               <div className="row links-wrap">
                 <div className="col-6 col-sm-6 col-md-3">
                   <ul className="list-unstyled">
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Brands</a></li>
-                    <li><a href="#">Catalogues</a></li>
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="/journey">Our Journey</a></li>
+                    <li><a href="/catalogues">Catalogues</a></li>
                   </ul>
                 </div>
 
@@ -142,15 +142,15 @@ const Footer = () => {
                   <ul className="list-unstyled">
                     <li><a href="#">Support</a></li>
                     <li><a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event("open-enquiry-drawer")); }}>Enquire Now</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
                   </ul>
                 </div>
 
                 <div className="col-6 col-sm-6 col-md-3">
                   <ul className="list-unstyled">
                     <li><a href="#">Useful Links</a></li>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">Solutions</a></li>
+                    <li><a href="/collections">Collections</a></li>
+                    <li><a href="/solutions">Solutions</a></li>
                   </ul>
                 </div>
 

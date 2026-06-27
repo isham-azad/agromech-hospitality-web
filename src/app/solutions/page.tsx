@@ -149,7 +149,7 @@ export default function SolutionsPage() {
             >
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-zinc-100 aspect-[4/3]">
                 <Image
-                  src="/images/categories/buffetware.jpg"
+                  src="/images/services-3.jpg"
                   alt="Premium Tabletop Styling"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-700"
