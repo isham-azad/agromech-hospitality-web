@@ -18,7 +18,7 @@ const services = [
   },
   {
     name: "INSTALLATION",
-    image: "/images/services/service-3.jpg",
+    image: "/images/services/service-3.png",
     desc: "Our specialist installation team includes experienced fabricators, welders, plumbers, and catering equipment engineers. We manage all types of foodservice equipment installations, working closely with manufacturers, consultants, contractors, and end users. Led by dedicated site supervisors and overseen by a project manager, our team delivers projects efficiently — even within tight deadlines, challenging site conditions, and complex environments. We ensure full coordination from design stage through final handover. Our services include complete kitchen installations (including non-standard layouts), equipment upgrades and adaptations, refurbishment, re-installation, and relocation of equipment. No matter how complex the site or requirement, we are equipped to deliver on time and to the highest standard."
   },
   {
@@ -28,7 +28,7 @@ const services = [
   },
   {
     name: "TECHNICAL TEAM",
-    image: "/images/services/service-4.jpg",
+    image: "/images/services/service-4.png",
     desc: "Our technicians are carefully selected, fully trained to both industry and company standards, and regularly attend manufacturers’ courses to stay updated on the latest products and repair techniques. All are directly employed by us and available on call. We have specialists covering all types of commercial catering equipment, including Gas equipment (ranges, woks, combination ovens, fryers, bratt pans, Warewashing); Coffee machines, beverage equipment, juicers, blenders, ice cubers, and snack line equipment; and Induction units, microwaves, vacuum packing machines, combination ovens, bakery equipment, and refrigeration."
   },
   {

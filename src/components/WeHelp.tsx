@@ -116,7 +116,7 @@ const WeHelp = () => {
             </div>
 
             <div className="pt-4 sm:pt-6">
-              <a href="#" className="inline-block bg-[#2f2f2f] text-white text-[11px] font-bold uppercase tracking-widest px-12 py-4 rounded-full transition-all hover:bg-zinc-900 active:scale-95 text-center w-full sm:w-auto">Explore Our Solutions</a>
+              <a href="/solutions" className="inline-block bg-[#2f2f2f] text-white text-[11px] font-bold uppercase tracking-widest px-12 py-4 rounded-full transition-all hover:bg-zinc-900 active:scale-95 text-center w-full sm:w-auto">Explore Our Solutions</a>
             </div>
           </motion.div>
 

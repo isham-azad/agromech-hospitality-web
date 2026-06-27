@@ -21,7 +21,7 @@ const cataloguesList: Catalogue[] = [
     category: "Hotel & Restaurant Tableware",
     pages: 131,
     year: "2026",
-    image: "https://agromechhospitality.com/images/nikko-japan.jpg",
+    image: "/images/catalogues/nikko-japan.jpg",
     description: ""
   },
   {
@@ -30,7 +30,7 @@ const cataloguesList: Catalogue[] = [
     category: "Food Service Collections",
     pages: 183,
     year: "2025",
-    image: "https://agromechhospitality.com/images/cosy-trendy.jpg",
+    image: "/images/catalogues/cosy-trendy.jpg",
     description: ""
   },
   {
@@ -39,7 +39,7 @@ const cataloguesList: Catalogue[] = [
     category: "Today, Served by Sola",
     pages: 120,
     year: "2025",
-    image: "https://agromechhospitality.com//images/sola.jpg",
+    image: "/images/catalogues/sola.jpg",
     description: ""
   },
   {
@@ -48,7 +48,7 @@ const cataloguesList: Catalogue[] = [
     category: "Cutlery Portugal",
     pages: 110,
     year: "2025",
-    image: "https://agromechhospitality.com/images/belo-inox.jpg",
+    image: "/images/catalogues/belo-inox.jpg",
     description: ""
   },
   {
@@ -57,7 +57,7 @@ const cataloguesList: Catalogue[] = [
     category: "Italian Glassware",
     pages: 31,
     year: "2026",
-    image: "https://agromechhospitality.com/images/luigi-bormioli.jpg",
+    image: "/images/catalogues/luigi-bormioli.jpg",
     description: ""
   },
   {
@@ -66,7 +66,7 @@ const cataloguesList: Catalogue[] = [
     category: "Buffet & Banquet",
     pages: 99,
     year: "2026",
-    image: "https://agromechhospitality.com/images/craster.jpg",
+    image: "/images/catalogues/craster.jpg",
     description: ""
   },
   {
@@ -75,7 +75,7 @@ const cataloguesList: Catalogue[] = [
     category: "Wooden Serveware",
     pages: 56,
     year: "2025",
-    image: "https://agromechhospitality.com/images/earthy-house.jpg",
+    image: "/images/catalogues/earthy-house.jpg",
     description: ""
   },
   {
@@ -84,7 +84,7 @@ const cataloguesList: Catalogue[] = [
     category: "Buffet | Tabletop | Bar ",
     pages: 628,
     year: "2025",
-    image: "https://agromechhospitality.com/images/aps.jpg",
+    image: "/images/catalogues/aps.jpg",
     description: ""
   },
   {
@@ -93,7 +93,7 @@ const cataloguesList: Catalogue[] = [
     category: "Healty Cooking styles to healthy food",
     pages: 164,
     year: "2025",
-    image: "https://agromechhospitality.com/images/lava.jpg",
+    image: "/images/catalogues/lava.jpg",
     description: ""
   },
   {
@@ -102,7 +102,7 @@ const cataloguesList: Catalogue[] = [
     category: "Professional Barware",
     pages: 128,
     year: "2026",
-    image: "https://agromechhospitality.com/images/bar-professional.jpg",
+    image: "/images/catalogues/bar-professional.jpg",
     description: ""
   },
   {
@@ -111,7 +111,7 @@ const cataloguesList: Catalogue[] = [
     category: "Food Service Equipments",
     pages: 298,
     year: "2026",
-    image: "https://agromechhospitality.com/images/cambro-75.jpg",
+    image: "/images/catalogues/cambro-75.jpg",
     description: ""
   },
   {
@@ -120,7 +120,7 @@ const cataloguesList: Catalogue[] = [
     category: "Food Service Products",
     pages: 67,
     year: "2026",
-    image: "https://agromechhospitality.com/images/tribeca-turkey.jpg",
+    image: "/images/catalogues/tribeca-turkey.jpg",
     description: ""
   },
   {
@@ -129,7 +129,7 @@ const cataloguesList: Catalogue[] = [
     category: "Food Preparation Equipment",
     pages: 192,
     year: "2026",
-    image: "https://agromechhospitality.com/images/robot-coupe.jpg",
+    image: "/images/catalogues/robot-coupe.jpg",
     description: ""
   },
   {
@@ -138,7 +138,7 @@ const cataloguesList: Catalogue[] = [
     category: "Washer Disinfectors",
     pages: 16,
     year: "2026",
-    image: "https://agromechhospitality.com/images/meiko-topline.jpg",
+    image: "/images/catalogues/meiko-topline.jpg",
     description: ""
   },
   {
@@ -147,10 +147,54 @@ const cataloguesList: Catalogue[] = [
     category: "Cleaning & Disinfecting Appliances",
     pages: 12,
     year: "2026",
-    image: "https://agromechhospitality.com/images/topline-range.jpg",
+    image: "/images/catalogues/topline-range.jpg",
     description: ""
-  }
-
+  },
+  {
+    id: "Catering Equipment",
+    title: "Ecoair",
+    category: "Kitchen Odor Control Systems",
+    pages: 32,
+    year: "2026",
+    image: "/images/catalogues/eco-air.png",
+    description: ""
+  },
+  {
+    id: "Catering Equipment",
+    title: "Lainox",
+    category: "Commercial Combi Ovens",
+    pages: 144,
+    year: "2026",
+    image: "/images/catalogues/lainox.png",
+    description: ""
+  },
+  {
+    id: "Catering Equipment",
+    title: "Molteni",
+    category: "Luxury Professional Cooking Suites",
+    pages: 64,
+    year: "2026",
+    image: "/images/catalogues/molteni.png",
+    description: ""
+  },
+  {
+    id: "Catering Equipment",
+    title: "ScanBox",
+    category: "Insulated Food Transport Carts",
+    pages: 80,
+    year: "2026",
+    image: "/images/catalogues/scanbox.png",
+    description: ""
+  },
+  {
+    id: "Catering Equipment",
+    title: "Tournus Equipement",
+    category: "Stainless Steel Prep & Logistics",
+    pages: 112,
+    year: "2026",
+    image: "/images/catalogues/tournus.png",
+    description: ""
+  },
 ];
 
 export default function CataloguesPage() {

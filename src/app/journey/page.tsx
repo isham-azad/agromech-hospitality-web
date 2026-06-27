@@ -254,7 +254,7 @@ export default function JourneyPage() {
               <div className="text-xs md:text-sm uppercase tracking-widest text-white/60">Years of Experience</div>
             </div>
             <div>
-              <div className="text-3xl md:text-6xl font-black text-[#FD8E0E] mb-2">5.2L+</div>
+              <div className="text-3xl md:text-6xl font-black text-[#FD8E0E] mb-2">1M+</div>
               <div className="text-xs md:text-sm uppercase tracking-widest text-white/60">Sq. Ft. Operational Space</div>
             </div>
             <div>
