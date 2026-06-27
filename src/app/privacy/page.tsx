@@ -1,111 +1,348 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+interface PolicySection {
+  id: string;
+  num: string;
+  title: string;
+  content: string;
+  boldBullets?: { term: string; definition: string }[];
+  plainBullets?: string[];
+}
+
+const policySections: PolicySection[] = [
+  {
+    id: "info-collect",
+    num: "1",
+    title: "Information We Collect",
+    content: "We may collect the following types of information when you interact with our website or use our services:",
+    boldBullets: [
+      {
+        term: "Personal Information",
+        definition: "Name, email address, phone number, company name, and other details voluntarily provided via contact forms or catalogues request handles."
+      },
+      {
+        term: "Business Information",
+        definition: "Company profile, VAT credentials, country of operation, and logistics preferences related to commercial projects."
+      },
+      {
+        term: "Technical Information",
+        definition: "IP address, browser type, operating system, and general navigation behaviors collected through cookies and tracking systems."
+      }
+    ]
+  },
+  {
+    id: "info-use",
+    num: "2",
+    title: "How We Use Your Information",
+    content: "We process and utilize your information to optimize client relations, fulfill orders, and coordinate services, including to:",
+    boldBullets: [
+      {
+        term: "Fulfill Operations",
+        definition: "Process orders, schedule deliveries, manage active projects, and coordinate commercial kitchen design installations."
+      },
+      {
+        term: "Improve Platform Experience",
+        definition: "Analyze website performance, address system bugs, optimize layout paths, and enhance technical speed."
+      },
+      {
+        term: "Client Relations",
+        definition: "Reply to quote requests, dispatch digital archives/catalogues, and share news updates when explicitly consented."
+      },
+      {
+        term: "Ensure Safety & Compliance",
+        definition: "Observe local UAE commercial rules, manage tax reporting, and comply with state food control guidelines."
+      }
+    ]
+  },
+  {
+    id: "info-protect",
+    num: "3",
+    title: "How We Protect Your Information",
+    content: "We utilize robust technical and administrative security measures—including SSL encryption, secure data hosts, and restricted firewalls—to defend your personal profile against unlawful access, modification, exposure, or deletion. We continuously review our security protocols to protect client and visitor operations."
+  },
+  {
+    id: "info-share",
+    num: "4",
+    title: "Sharing Your Information",
+    content: "We do not sell, rent, commercialize, or share client details for third-party advertising. We share information only with restricted parties essential for operations under strict confidentiality frameworks:",
+    boldBullets: [
+      {
+        term: "Service Providers",
+        definition: "Trusted associates assisting in delivering our services (e.g. secure web hosts, CRM database systems, and payment gateways)."
+      },
+      {
+        term: "Legal Authorities",
+        definition: "When strictly required by applicable UAE laws, federal regulations, or legal processes to protect our corporate rights and client security."
+      }
+    ]
+  },
+  {
+    id: "cookies",
+    num: "5",
+    title: "Cookies and Tracking",
+    content: "Our website uses cookies and similar identifiers to enhance browsing efficiency and personalize your session. Cookies are small data archives saved locally on your device. You can configure your browser options to refuse cookies; however, please note that certain modules of our interactive platform may not execute or display correctly."
+  },
+  {
+    id: "rights",
+    num: "6",
+    title: "Your Rights",
+    content: "We respect your data rights. Depending on local laws and guidelines, you are entitled to the following actions regarding your personal data:",
+    boldBullets: [
+      {
+        term: "Access",
+        definition: "Request a structural summary and copy of all personal information we currently hold about you."
+      },
+      {
+        term: "Correct",
+        definition: "Request correction of inaccurate, obsolete, or incomplete personal data records."
+      },
+      {
+        term: "Delete",
+        definition: "Request deletion of your data profiles, subject to local regulatory record retention rules."
+      },
+      {
+        term: "Opt-Out",
+        definition: "Unsubscribe from automated updates, email campaigns, or marketing alerts via our quick-unsubscribe handles."
+      }
+    ]
+  },
+  {
+    id: "prohibited",
+    num: "7",
+    title: "Prohibited Uses",
+    content: "In compliance with our Terms of Service, users are strictly prohibited from using our website content, blueprints, catalog pages, or structural frameworks:",
+    plainBullets: [
+      "For any unlawful, fraudulent, or unauthorized purpose.",
+      "To solicit others to conduct, participate in, or support illegal activities.",
+      "To violate, infringe, or bypass any local, federal, or international laws, regulatory norms, or local ordinances.",
+      "To harvest, extract, or scrape user profiles, email databases, or product configurations."
+    ]
+  },
+  {
+    id: "accuracy",
+    num: "8",
+    title: "Accuracy of Information",
+    content: "While we make every effort to maintain accurate, detailed, and up-to-date documentation on this platform, we do not warrant that all specifications are entirely error-free. The content is provided for general commercial reference only. Any reliance on the material on this site is at your own discretion."
+  },
+  {
+    id: "links",
+    num: "9",
+    title: "Third-Party Links",
+    content: "Our site features cross-reference links leading to third-party websites or brand partner sites. We hold no responsibility or liability for their privacy architectures, cookie rules, or content quality. We strongly recommend reading the privacy logs of any external link you visit."
+  },
+  {
+    id: "changes",
+    num: "10",
+    title: "Changes to This Policy",
+    content: "We reserve the right to modify this Privacy Policy at any time. Any changes, updates, or revisions will be uploaded directly to this page. We encourage you to review this log periodically to stay informed about how we safeguard your data."
+  },
+  {
+    id: "contact",
+    num: "11",
+    title: "Contact Information",
+    content: "If you have any questions, complaints, or inquiries regarding this policy or how we store, process, and secure your personal corporate data, please direct your communication to our technical operations desk:"
+  }
+];
 
 export default function PrivacyPage() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredSections = useMemo(() => {
+    return policySections.filter(
+      (sec) =>
+        sec.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        sec.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        sec.boldBullets?.some(
+          (b) =>
+            b.term.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            b.definition.toLowerCase().includes(searchQuery.toLowerCase())
+        ) ||
+        sec.plainBullets?.some((b) =>
+          b.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+    );
+  }, [searchQuery]);
+
+  const handleScrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <main className="bg-zinc-50 min-h-screen py-24 md:py-32 px-6">
-      <div className="container mx-auto max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="bg-white p-8 md:p-16 rounded-[2.5rem] shadow-sm border border-zinc-200/80 space-y-10"
-        >
-          <div className="text-center pb-6 border-b border-zinc-100">
-            <h1 className="text-3xl md:text-5xl font-black text-zinc-900 uppercase tracking-tight mb-4">
-              Privacy <span className="text-[#FD8E0E]">Policy</span>
+    <main className="bg-[#FCFCFC] min-h-screen pt-32 pb-40 selection:bg-[#FD8E0E] selection:text-white font-sans">
+      <div className="container mx-auto px-6 max-w-7xl">
+        {/* Premium Header Block */}
+        <header className="relative bg-[#221F51] text-white rounded-[2.5rem] p-8 md:p-16 overflow-hidden shadow-2xl mb-12">
+          {/* Background Ambient Glows */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#FD8E0E]/15 rounded-full filter blur-[80px] pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#FD8E0E]/5 rounded-full filter blur-[100px] pointer-events-none"></div>
+          
+          <div className="relative z-10 space-y-4 max-w-2xl">
+            <span className="text-[#FD8E0E] text-[10px] font-black uppercase tracking-[0.4em] block">
+              Legal Compliance
+            </span>
+            <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none italic">
+              Privacy <span className="text-[#FD8E0E] not-italic">Policy.</span>
             </h1>
-            <p className="text-zinc-500 text-sm font-light">Last Updated: June 2026</p>
+            <p className="text-white/70 text-sm md:text-base font-light leading-relaxed">
+              We respect your data privacy. Learn how Agromech Hospitality Dubai collects, secures, and utilizes corporate and personal details.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-4 text-xs font-medium text-white/50">
+              <span className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-4 py-1.5">
+                <i className="far fa-calendar-alt text-[#FD8E0E]"></i>
+                <span>Last Updated: June 2026</span>
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-4 py-1.5">
+                <i className="fas fa-shield-alt text-[#FD8E0E]"></i>
+                <span>Certified GDPR / HACCP Data Rules</span>
+              </span>
+            </div>
           </div>
+        </header>
 
-          <div className="space-y-8 text-zinc-600 leading-relaxed font-light">
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">1. Information We Collect</h2>
-              <p>We may collect the following types of information:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li><strong className="text-zinc-800">Personal Information:</strong> Name, email address, phone number, company name, and other information voluntarily provided via contact forms or inquiries.</li>
-                <li><strong className="text-zinc-800">Business Information:</strong> Company details related to service inquiries or purchases.</li>
-                {/* <li><strong className="text-zinc-800">Payment Information:</strong> Credit card or banking details when processing transactions.</li> */}
-                <li><strong className="text-zinc-800">Technical Information:</strong> IP address, browser type, and usage data collected through cookies and other tracking technologies.</li>
-              </ul>
-            </section>
+        {/* Content Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Left Column: TOC and Search Tool */}
+          <aside className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-28 space-y-6">
+            <div className="bg-white rounded-3xl border border-zinc-100 p-6 shadow-sm space-y-6">
+              {/* Search Box */}
+              <div className="space-y-2">
+                <label className="block text-[8px] font-black uppercase tracking-widest text-zinc-400">
+                  Search Policy
+                </label>
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 text-xs">
+                    <i className="fas fa-search text-[10px]"></i>
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="Search section..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full bg-zinc-50 border border-zinc-100/60 rounded-xl py-2.5 pl-9 pr-3 text-[11px] text-zinc-800 focus:outline-none focus:border-[#FD8E0E] transition-all"
+                  />
+                </div>
+              </div>
 
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">2. How We Use Your Information</h2>
-              <p>We use the information collected to:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li><strong className="text-zinc-800">Provide Our Services:</strong> Process orders, manage contracts, and fulfill requests.</li>
-                <li><strong className="text-zinc-800">Improve Our Website:</strong> Monitor website performance and enhance user experience.</li>
-                <li><strong className="text-zinc-800">Communicate with You:</strong> Send updates, respond to inquiries, and deliver promotional content.</li>
-                <li><strong className="text-zinc-800">Ensure Legal Compliance:</strong> Meet legal obligations, such as tax or record-keeping requirements.</li>
-              </ul>
-            </section>
+              {/* Navigation Links */}
+              <div className="space-y-1">
+                <span className="block text-[8px] font-black uppercase tracking-widest text-zinc-400 mb-2">
+                  Sections
+                </span>
+                <nav className="flex flex-col gap-1.5 max-h-[320px] lg:max-h-none overflow-y-auto no-scrollbar">
+                  {filteredSections.map((sec) => (
+                    <button
+                      key={sec.id}
+                      onClick={() => handleScrollTo(sec.id)}
+                      className="text-left text-[10px] font-bold text-zinc-500 hover:text-[#FD8E0E] uppercase tracking-wider py-1 border-l-2 border-transparent hover:border-[#FD8E0E] pl-3 transition-all focus:outline-none"
+                    >
+                      {sec.num}. {sec.title}
+                    </button>
+                  ))}
+                  {filteredSections.length === 0 && (
+                    <span className="text-xs text-zinc-400 font-light">No sections matched.</span>
+                  )}
+                </nav>
+              </div>
+            </div>
 
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">3. How We Protect Your Information</h2>
-              <p>We implement appropriate security measures—including encryption and secure servers—to safeguard your personal information from unauthorized access, alteration, or disclosure.</p>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">4. Sharing Your Information</h2>
-              <p>We do not sell, trade, or rent your personal information. However, we may share it with:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li><strong className="text-zinc-800">Service Providers:</strong> Trusted third parties who help deliver our services (e.g., payment processors, hosting partners).</li>
-                <li><strong className="text-zinc-800">Legal Authorities:</strong> When required by law or to protect our rights and comply with legal obligations.</li>
-              </ul>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">5. Cookies and Tracking Technologies</h2>
-              <p>Our website uses cookies to improve your browsing experience. These are small files stored on your device. You can change your browser settings to disable cookies; however, some site features may not function properly as a result.</p>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">6. Your Rights</h2>
-              <p>You have the right to:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li><strong className="text-zinc-800">Access:</strong> Request a copy of the personal information we hold about you.</li>
-                <li><strong className="text-zinc-800">Correct:</strong> Update inaccurate or incomplete information.</li>
-                <li><strong className="text-zinc-800">Delete:</strong> Request deletion of your data, subject to legal obligations.</li>
-                <li><strong className="text-zinc-800">Opt-Out:</strong> Unsubscribe from marketing communications at any time via the link in our emails.</li>
-              </ul>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">7. Prohibited Uses</h2>
-              <p>In accordance with our Terms of Service, you are prohibited from using this site or its content:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>For any unlawful purpose</li>
-                <li>To solicit others to perform unlawful acts</li>
-                <li>To violate any applicable laws, regulations, or ordinances</li>
-              </ul>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">8. Accuracy and Timeliness of Information</h2>
-              <p>We strive to ensure the information on our site is accurate and up to date. However, we are not liable for inaccuracies, and the content is provided for general information only. It is your responsibility to monitor any changes made to our website.</p>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">9. Third-Party Links</h2>
-              <p>Our website may contain links to third-party websites. We are not responsible for their privacy practices or content. Please review their privacy policies before providing any personal information.</p>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">10. Changes to This Policy</h2>
-              <p>We may update this Privacy Policy from time to time. Changes will be posted on this page, and we encourage you to review it regularly.</p>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide">11. Contact Us</h2>
-              <p>If you have any questions or concerns about this Privacy Policy or how we handle your personal data, please contact us at:</p>
-              <p className="font-medium text-zinc-900 mt-2">
-                Email: <a href="mailto:info@agromechhospitaliy.com" className="text-[#FD8E0E] hover:underline">info@agromechhospitaliy.com</a>
+            {/* Support Highlight Box */}
+            <div className="bg-[#221F51] text-white rounded-3xl p-6 shadow-sm relative overflow-hidden">
+              <div className="absolute -right-10 -bottom-10 w-28 h-28 bg-[#FD8E0E]/15 rounded-full filter blur-[20px]"></div>
+              <h4 className="text-[10px] font-black uppercase tracking-widest text-[#FD8E0E] mb-2">Legal Operations</h4>
+              <p className="text-[10px] text-white/70 leading-relaxed font-light mb-4">
+                For formal data removal requests under GDPR or local authority regulations, please address our compliance department.
               </p>
-            </section>
+              <a href="mailto:info@agromechhospitality.com" className="text-[10px] font-bold text-white hover:text-[#FD8E0E] flex items-center gap-1.5 no-underline transition-colors">
+                <i className="fas fa-envelope text-[11px]"></i>
+                <span>info@agromechhospitality.com</span>
+              </a>
+            </div>
+          </aside>
+
+          {/* Right Column: Policies */}
+          <div className="lg:col-span-8 xl:col-span-9 space-y-8">
+            <AnimatePresence mode="popLayout">
+              {filteredSections.map((sec, idx) => (
+                <motion.section
+                  key={sec.id}
+                  id={sec.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4, delay: idx * 0.05 }}
+                  className="bg-white rounded-[2rem] border border-zinc-100 p-6 md:p-10 shadow-sm hover:shadow-[0_15px_40px_rgba(0,0,0,0.015)] hover:border-zinc-200/50 transition-all duration-300 scroll-mt-24"
+                >
+                  <div className="flex items-center gap-3 border-b border-zinc-50 pb-4 mb-6">
+                    <span className="w-8 h-8 rounded-full bg-[#FD8E0E]/10 flex items-center justify-center text-xs font-black text-[#FD8E0E]">
+                      {sec.num}
+                    </span>
+                    <h2 className="text-sm md:text-base font-black text-zinc-900 uppercase tracking-wide">
+                      {sec.title}
+                    </h2>
+                  </div>
+
+                  <div className="space-y-4">
+                    <p className="text-zinc-500 text-sm leading-relaxed font-light">
+                      {sec.content}
+                    </p>
+
+                    {/* Bold Bullet Blocks */}
+                    {sec.boldBullets && (
+                      <ul className="space-y-3 pt-2">
+                        {sec.boldBullets.map((bullet, bIdx) => (
+                          <li key={bIdx} className="flex items-start gap-3">
+                            <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#FD8E0E] shrink-0"></span>
+                            <span className="text-zinc-500 text-sm font-light leading-relaxed">
+                              <strong className="text-zinc-800 font-bold tracking-wide block sm:inline mr-1">{bullet.term}:</strong>
+                              {bullet.definition}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {/* Plain Bullet Blocks */}
+                    {sec.plainBullets && (
+                      <ul className="space-y-3 pt-2">
+                        {sec.plainBullets.map((bullet, bIdx) => (
+                          <li key={bIdx} className="flex items-start gap-3">
+                            <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#FD8E0E] shrink-0"></span>
+                            <span className="text-zinc-500 text-sm font-light leading-relaxed">
+                              {bullet}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {/* Custom contact block */}
+                    {sec.id === "contact" && (
+                      <div className="mt-6 bg-[#FCFCFC] border border-zinc-100 rounded-2xl p-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <div className="space-y-1">
+                          <span className="text-[9px] font-black uppercase tracking-widest text-[#221F51]/50 block">Technical Support</span>
+                          <span className="text-xs font-bold text-zinc-900">Agromech Hospitality Dubai Desk</span>
+                        </div>
+                        <a
+                          href="mailto:info@agromechhospitality.com"
+                          className="bg-[#221F51] hover:bg-[#FD8E0E] text-white hover:text-[#221F51] transition-all px-5 py-2.5 rounded-xl font-bold uppercase tracking-widest text-[9px] no-underline focus:outline-none shadow-sm flex items-center gap-2"
+                        >
+                          <i className="fas fa-envelope-open text-[10px]"></i>
+                          <span>info@agromechhospitality.com</span>
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </motion.section>
+              ))}
+            </AnimatePresence>
           </div>
-        </motion.div>
+        </div>
       </div>
     </main>
   );

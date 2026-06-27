@@ -44,7 +44,7 @@ const Footer = () => {
           <img src="/images/50-years-gold-round.png" alt="50 Years of Excellence" className="img-fluid" />
         </div> */}
 
-        <div className="row justify-content-center">
+        <div className="row justify-content-center pt-3">
           <div className="col-lg-8">
             <div className="subscription-form">
               <h3 className="d-flex align-items-center justify-content-center">
