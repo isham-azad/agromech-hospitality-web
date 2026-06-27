@@ -347,27 +347,27 @@ export default function CataloguesPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/40 to-transparent"></div>
 
                 {/* Cover Content */}
-                <div className="absolute inset-0 p-4 sm:p-8 flex flex-col justify-between z-10">
+                <div className="absolute inset-0 p-3 sm:p-8 flex flex-col justify-between z-10">
                   <div className="flex justify-between items-start">
-                    <span className="text-[8px] sm:text-[10px] font-black text-white/50">{cat.id}</span>
+                    <span className="text-[7.5px] sm:text-[10px] font-black text-white/50 tracking-wider">{cat.id}</span>
                     <span className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-[#FD8E0E] text-[6px] sm:text-[8px] font-black uppercase tracking-widest text-white">
                       {cat.year}
                     </span>
                   </div>
                   <div className="space-y-1 sm:space-y-2">
-                    <span className="text-[#FD8E0E] text-[7px] sm:text-[9px] font-black uppercase tracking-[0.3em] block">
+                    <span className="text-[#FD8E0E] text-[7px] sm:text-[9px] font-black uppercase tracking-[0.15em] sm:tracking-[0.3em] block leading-tight">
                       {cat.category}
                     </span>
-                    <h3 className="text-sm sm:text-2xl font-black text-white uppercase tracking-tight leading-tight">
+                    <h3 className="text-[13px] sm:text-2xl font-black text-white uppercase tracking-tight leading-tight">
                       {cat.title}
                     </h3>
                     <p className="text-white/60 text-[8px] sm:text-xs font-light line-clamp-2 leading-relaxed hidden sm:block">
                       {cat.description}
                     </p>
-                    <div className="flex items-center gap-1.5 text-white/70 text-[8px] sm:text-[10px] font-black uppercase tracking-widest pt-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-1.5 text-white/70 text-[7.5px] sm:text-[10px] font-black uppercase tracking-wider sm:tracking-widest pt-1 sm:pt-2">
                       <span>{cat.pages} Pages</span>
-                      <span className="w-1.5 h-1.5 bg-[#FD8E0E] rounded-full"></span>
-                      <span className="group-hover:text-[#FD8E0E] transition-colors">Request Catalogue</span>
+                      <span className="hidden sm:inline-block w-1.5 h-1.5 bg-[#FD8E0E] rounded-full"></span>
+                      <span className="group-hover:text-[#FD8E0E] transition-colors text-[#FD8E0E] sm:text-white/70">Request Catalogue</span>
                     </div>
                   </div>
                 </div>
