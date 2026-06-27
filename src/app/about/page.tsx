@@ -77,7 +77,7 @@ const AboutPage = () => {
                 <p className="text-zinc-600 text-lg leading-relaxed font-light">
                   The Agromech Group’s entry into the hospitality sector was driven by a clear vision — to meet the industry’s growing demand for a comprehensive, high-quality, and reliable product range from a single trusted source.
                 </p>
-                <p className="text-zinc-500 text-base leading-relaxed font-light">
+                <p className="text-zinc-600 text-lg leading-relaxed font-light">
                   With a network of brands and suppliers across +20 countries, we have the flexibility to offer products of exceptional quality at a wide range of price points. Our commitment to green, carbon-neutral, and sustainable practices adds a layer of social responsibility to every product we deliver.
                 </p>
               </div>
@@ -86,7 +86,7 @@ const AboutPage = () => {
                 <p className="text-zinc-600 text-lg leading-relaxed font-light">
                   Agromech Hospitality Dubai, led by industry veterans Mr. Sanjay Jain and Mr. Joe Thomas, is built on decades of experience and a reputation for integrity and trust.
                 </p>
-                <p className="text-zinc-500 text-base leading-relaxed font-light">
+                <p className="text-zinc-600 text-lg leading-relaxed font-light">
                   Known for reliability, accountability, and service excellence, the company is committed to delivering high-quality, tailored hospitality solutions that consistently meet and exceed client expectations.
                 </p>
               </div>
@@ -170,10 +170,10 @@ const AboutPage = () => {
                 <p className="text-zinc-600 text-lg leading-relaxed font-light">
                   We provide complete commercial kitchen design and installation solutions tailored to any budget or project size. From initial consultation to final handover, our experienced team manages the entire process, ensuring HACCP-compliant designs approved by local Food Control Authorities.
                 </p>
-                <p className="text-zinc-500 text-base leading-relaxed font-light">
+                <p className="text-zinc-600 text-lg leading-relaxed font-light">
                   We specialize in planning and equipping kitchens for cafés, restaurants, hotels, healthcare facilities, educational institutions, and large-scale production units. As independent suppliers, we recommend the most reliable and suitable equipment for each project.
                 </p>
-                <p className="text-zinc-500 text-base leading-relaxed font-light">
+                <p className="text-zinc-600 text-lg leading-relaxed font-light">
                   Whether you need a new kitchen, renovation, or upgrade, we deliver efficient, practical, and cost-effective solutions. Design fees may apply but can often be offset against equipment orders.
                 </p>
               </div>
