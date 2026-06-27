@@ -203,8 +203,8 @@ const AboutPage = () => {
                 <span className="text-white/60 text-xs uppercase tracking-widest font-bold">Years Experience</span>
               </div>
               <div className="space-y-2">
-                <span className="text-[#FD8E0E] text-4xl font-black block">10k+</span>
-                <span className="text-white/60 text-xs uppercase tracking-widest font-bold">Sqm Facility</span>
+                <span className="text-[#FD8E0E] text-4xl font-black block">1M+</span>
+                <span className="text-white/60 text-xs uppercase tracking-widest font-bold">Sq. Ft. Operational Space</span>
               </div>
               <div className="space-y-2">
                 <span className="text-[#FD8E0E] text-4xl font-black block">900+</span>

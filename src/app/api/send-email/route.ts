@@ -5,20 +5,20 @@ import path from "path";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { 
-      name, 
-      email, 
-      phone, 
-      company, 
-      subject, 
-      service, 
-      message, 
-      catalogue, 
-      address, 
-      city, 
-      zipcode, 
-      vatnumber, 
-      country 
+    const {
+      name,
+      email,
+      phone,
+      company,
+      subject,
+      service,
+      message,
+      catalogue,
+      address,
+      city,
+      zipcode,
+      vatnumber,
+      country
     } = body;
 
     // Convert local logo to base64 Data URI
@@ -60,7 +60,7 @@ Zipcode: ${zipcode || "N/A"}
 VAT Number: ${vatnumber || "N/A"}
       `
       : isEnquiry
-      ? `
+        ? `
 New Solutions Enquiry
 =====================
 Name: ${name}
@@ -71,7 +71,7 @@ Solution Requested: ${service}
 Message:
 ${message}
       `
-      : `
+        : `
 General Contact Message
 =======================
 Name: ${name}
@@ -319,7 +319,7 @@ ${message}
       throw new Error("RESEND_API_KEY is not configured in environmental variables.");
     }
 
-    const fromEmail = process.env.RESEND_FROM || "onboarding@resend.dev";
+    const fromEmail = process.env.RESEND_FROM;
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -328,7 +328,7 @@ ${message}
       },
       body: JSON.stringify({
         from: fromEmail,
-        to: "ishamazad@gmail.com",
+        to: `${fromEmail}, anusha@agromechhospitality.com`,
         reply_to: email,
         subject: subjectText,
         text: plainText,

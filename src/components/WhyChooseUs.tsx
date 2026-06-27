@@ -106,7 +106,7 @@ const WhyChooseUs = () => {
           >
             <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl relative z-10">
               <img
-                src="/images/why-choose-us-img.jpg?v=1"
+                src="/images/about-agromech.jpg?v=1"
                 alt="Why Choose Us"
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-1000"
               />
