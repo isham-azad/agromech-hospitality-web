@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import EnquiryDrawer from "./EnquiryDrawer";
 
@@ -10,6 +11,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -149,16 +155,22 @@ const Navbar = () => {
               className="md:hidden bg-white border-t border-zinc-100 overflow-hidden"
             >
               <div className="container mx-auto px-6 py-8 flex flex-col space-y-6">
-                {[...leftLinks, ...rightLinks].map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="text-xs font-bold uppercase tracking-widest text-zinc-900 hover:text-[#FD8E0E] no-underline"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+                {(() => {
+                  const combined = [...leftLinks, ...rightLinks];
+                  const others = combined.filter(l => l.name.toLowerCase() !== "contact us");
+                  const contact = combined.find(l => l.name.toLowerCase() === "contact us");
+                  const orderedLinks = contact ? [...others, contact] : combined;
+                  return orderedLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="text-xs font-bold uppercase tracking-widest text-zinc-900 hover:text-[#FD8E0E] no-underline"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ));
+                })()}
               </div>
             </motion.div>
           )}

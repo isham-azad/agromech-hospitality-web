@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -28,6 +28,7 @@ const slides = [
 const Hero = () => {
   const [index, setIndex] = useState(0);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -36,6 +37,19 @@ const Hero = () => {
     }, 8000);
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.log("Autoplay was prevented:", error);
+        });
+      }
+    }
+  }, [index]);
 
   return (
     <div className="hero relative w-full aspect-video md:aspect-auto md:h-[calc(100vh-74px)] md:min-h-[626px] overflow-hidden bg-zinc-950 mt-[58px] md:mt-[74px]">
@@ -51,6 +65,7 @@ const Hero = () => {
         >
           <video
             key={slides[index].video}
+            ref={videoRef}
             autoPlay
             loop
             muted
