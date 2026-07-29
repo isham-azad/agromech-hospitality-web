@@ -19,7 +19,7 @@ const collectionsList: CollectionItem[] = [
     title: "Nikko Tableware",
     category: "Table Top",
     description: "Exquisite hotel-grade dinnerware combining timeless Japanese aesthetics with ultimate durability for elite dining.",
-    image: "https://agromechhospitality.com/images/nikko-japan.jpg",
+    image: "/images/catalogues/nikko-japan.jpg",
     link: "/categories/table-top"
   },
   {
@@ -27,7 +27,7 @@ const collectionsList: CollectionItem[] = [
     title: "Luigi Bormioli Glassware",
     category: "Bar & Glassware",
     description: "Italian crystal-clear, durable glass collections designed specifically for wine, spirits, and premium mixology.",
-    image: "https://agromechhospitality.com/images/luigi-bormioli.jpg",
+    image: "/images/catalogues/luigi-bormioli.jpg",
     link: "/categories/barware"
   },
   {
@@ -35,7 +35,7 @@ const collectionsList: CollectionItem[] = [
     title: "Belo Inox & Sola Cutlery",
     category: "Table Top",
     description: "Premium Portuguese and Dutch flatware collections engineered for perfect balance, elegance, and durability.",
-    image: "https://agromechhospitality.com/images/belo-inox.jpg",
+    image: "/images/catalogues/belo-inox.jpg",
     link: "/categories/table-top"
   },
   {
@@ -43,7 +43,7 @@ const collectionsList: CollectionItem[] = [
     title: "Craster Presentation Systems",
     category: "Buffetware",
     description: "Innovative buffet risers, luxury presentation systems, and intelligent space-saving banquet displays.",
-    image: "https://agromechhospitality.com/images/craster.jpg",
+    image: "/images/catalogues/craster.jpg",
     link: "/categories/buffetware"
   },
   {
@@ -51,7 +51,7 @@ const collectionsList: CollectionItem[] = [
     title: "APS Germany Collection",
     category: "Buffet & Bar",
     description: "Professional German-engineered buffetware, tabletop presentation accessories, and robust bar utensils.",
-    image: "https://agromechhospitality.com/images/aps.jpg",
+    image: "/images/catalogues/aps.jpg",
     link: "/categories/buffetware"
   },
   {
@@ -59,7 +59,7 @@ const collectionsList: CollectionItem[] = [
     title: "Lava Cast Iron Serveware",
     category: "Serveware",
     description: "Robust cast iron cooking and presentation ware that retains heat perfectly for high-end hot presentations.",
-    image: "https://agromechhospitality.com/images/lava.jpg",
+    image: "/images/catalogues/lava.jpg",
     link: "/categories/table-top"
   },
   {
@@ -67,7 +67,7 @@ const collectionsList: CollectionItem[] = [
     title: "Robot Coupe Smallware",
     category: "Kitchen & Stewarding",
     description: "High-performance vegetable prep, mixers, and processing units for high-volume, precision commercial kitchens.",
-    image: "https://agromechhospitality.com/images/robot-coupe.jpg",
+    image: "/images/catalogues/robot-coupe.jpg",
     link: "/categories/kitchen-smallware-stewarding"
   },
   {
@@ -75,7 +75,7 @@ const collectionsList: CollectionItem[] = [
     title: "Bar Professional",
     category: "Barware",
     description: "Complete professional barware solutions, cocktail shakers, tools, and accessories for master mixology.",
-    image: "https://agromechhospitality.com/images/bar-professional.jpg",
+    image: "/images/catalogues/bar-professional.jpg",
     link: "/categories/barware"
   }
 ];
