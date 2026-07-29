@@ -328,7 +328,7 @@ ${message}
       },
       body: JSON.stringify({
         from: fromEmail,
-        to: `${fromEmail}, anusha@agromechhospitality.com`,
+        to: fromEmail ? [fromEmail, "anusha@agromechhospitality.com"] : ["anusha@agromechhospitality.com"],
         reply_to: email,
         subject: subjectText,
         text: plainText,
