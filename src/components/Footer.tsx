@@ -129,37 +129,73 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-8">
-              <div className="row links-wrap">
-                <div className="col-6 col-sm-6 col-md-3">
+              <div className="row links-wrap mb-4">
+                <div className="col-6 col-md-2 mb-4 mb-md-0">
                   <ul className="list-unstyled">
                     <li><a href="/about">About us</a></li>
                     <li><a href="/journey">Our Journey</a></li>
                     <li><a href="/catalogues">Catalogues</a></li>
+                    <li><a href="/collections">Collections</a></li>
                   </ul>
                 </div>
 
-                <div className="col-6 col-sm-6 col-md-3">
+                <div className="col-6 col-md-2 mb-4 mb-md-0">
                   <ul className="list-unstyled">
                     <li><a href="#">Support</a></li>
+                    <li><a href="/solutions">Solutions</a></li>
                     <li><a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event("open-enquiry-drawer")); }}>Enquire Now</a></li>
                     <li><a href="/contact">Contact Us</a></li>
+                    <li className="d-block d-md-none"><a href="/privacy">Privacy Policy</a></li>
                   </ul>
                 </div>
 
-                <div className="col-6 col-sm-6 col-md-3">
-                  <ul className="list-unstyled">
-                    <li><a href="#">Useful Links</a></li>
-                    <li><a href="/collections">Collections</a></li>
-                    <li><a href="/solutions">Solutions</a></li>
-                  </ul>
-                </div>
-
-                <div className="col-6 col-sm-6 col-md-3 d-block d-md-none">
-                  <ul className="list-unstyled">
-                    <li><a href="#">Legal</a></li>
-                    {/* <li><a href="#">Terms &amp; Conditions</a></li> */}
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                  </ul>
+                <div className="col-12 col-md-6">
+                  <div className="categories-box p-3 rounded-3" style={{ backgroundColor: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                    <h6 className="mb-3" style={{ color: '#FD8E0E', fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>
+                      Categories
+                    </h6>
+                    <div className="d-flex flex-wrap gap-2">
+                      {[
+                        { name: "Table Top", link: "/categories/table-top" },
+                        { name: "Buffetware", link: "/categories/buffetware" },
+                        { name: "Barware", link: "/categories/barware" },
+                        { name: "Linen", link: "/categories/linen" },
+                        { name: "In-Room", link: "/categories/in-room" },
+                        { name: "Kitchen Smallware", link: "/categories/kitchen-smallware-stewarding" },
+                        { name: "Commercial Kitchen", link: "/categories/commercial-kitchen-laundry" },
+                        { name: "Outdoor & Banquet", link: "/categories/outdoor-banquet-furniture" },
+                      ].map((cat, i) => (
+                        <a
+                          key={i}
+                          href={cat.link}
+                          className="category-pill"
+                          style={{
+                            display: 'inline-block',
+                            padding: '4px 12px',
+                            borderRadius: '50px',
+                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                            color: 'rgba(255, 255, 255, 0.7)',
+                            fontSize: '11px',
+                            textDecoration: 'none',
+                            whiteSpace: 'nowrap',
+                            transition: 'all 0.3s'
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.color = '#FD8E0E';
+                            e.currentTarget.style.borderColor = '#FD8E0E';
+                            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)';
+                            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                            e.currentTarget.style.backgroundColor = 'transparent';
+                          }}
+                        >
+                          {cat.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
