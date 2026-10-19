@@ -145,6 +145,7 @@ const Footer = () => {
                     <li><a href="/solutions">Solutions</a></li>
                     <li><a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event("open-enquiry-drawer")); }}>Enquire Now</a></li>
                     <li><a href="/contact">Contact Us</a></li>
+                    <li className="d-block d-md-none"><a href="/terms">Terms &amp; Conditions</a></li>
                     <li className="d-block d-md-none"><a href="/privacy">Privacy Policy</a></li>
                   </ul>
                 </div>
@@ -211,7 +212,7 @@ const Footer = () => {
 
               <div className="col-lg-6 text-center text-lg-end d-none d-md-block">
                 <ul className="list-unstyled d-inline-flex ms-auto">
-                  {/* <li className="me-4"><a href="#">Terms &amp; Conditions</a></li> */}
+                  <li className="me-4"><a href="/terms">Terms &amp; Conditions</a></li>
                   <li><a href="/privacy">Privacy Policy</a></li>
                 </ul>
               </div>

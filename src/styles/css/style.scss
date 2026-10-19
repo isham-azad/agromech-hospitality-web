@@ -773,7 +773,8 @@ a.more {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.footer-dark-bg .list-unstyled li:first-child a {
+.footer-dark-bg .list-unstyled li:first-child a,
+.footer-dark-bg .copyright .list-unstyled li a {
   color: #FD8E0E !important;
   font-weight: 600;
   text-transform: uppercase;
